@@ -1,0 +1,1566 @@
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+ * {
+     font-family: 'Poppins', sans-serif;
+ }
+
+ :root {
+     --bg-primary: #000000;
+     --bg-secondary: #1a1a1a;
+     --text-primary: #F8FAFC;
+     --text-secondary: rgba(248, 250, 252, 0.5);
+     --border-primary: rgba(0, 0, 0, 0.2);
+     --input-bg: #2a2a2a;
+ }
+
+ [data-theme="light"] {
+     --bg-primary: #ffffff;
+     --bg-secondary: #f8f9fa;
+     --text-primary: #333333;
+     --text-secondary: rgba(0, 0, 0, 0.7);
+     --border-primary: rgba(0, 0, 0, 0.2);
+     --input-bg: #e0e0e0;
+ }
+
+ html,
+ body {
+     margin: 0;
+     padding: 0;
+     background-color: var(--bg-primary);
+     color: var(--text-primary);
+     overflow-x: hidden;
+     transition: background-color 0.3s ease, color 0.3s ease;
+     scroll-behavior: smooth;
+ }
+
+ .navbar {
+     display: flex;
+     justify-content: space-between;
+     max-height: 100px;
+ }
+
+ .dev-logo {
+     font-size: 2rem;
+     font-weight: 600;
+     color: var(--text-primary);
+     position: relative;
+     display: inline-block;
+     padding-left: 4.5em;
+     cursor: pointer;
+ }
+
+ .dev-logo::after {
+     content: "_";
+     color: #ff4ecf;
+     font-weight: 700;
+     font-size: 2rem;
+     animation: blink 0.8s step-end infinite;
+     position: absolute;
+     right: -1rem;
+     top: 0;
+ }
+
+ @keyframes blink {
+     50% {
+         opacity: 0;
+     }
+ }
+
+
+
+ .navbar .nav-text {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     width: 35%;
+ }
+
+ .navbar .nav-text ul {
+     display: flex;
+     align-items: center;
+     gap: 55px;
+     list-style: none;
+     padding: 0;
+     margin: 0;
+ }
+
+ .navbar .nav-text i {
+     display: none;
+     margin-left: auto;
+     cursor: pointer;
+     font-size: 1.7rem;
+ }
+
+ .navbar .nav-text ul li {
+     cursor: pointer;
+     position: relative;
+     padding-bottom: 5px;
+     font-size: 0.9em;
+ }
+
+ .navbar .nav-text ul li::before {
+     content: '';
+     position: absolute;
+     width: 0;
+     height: 2px;
+     bottom: 0;
+     left: 0;
+     background: linear-gradient(to right, #4b0082, #ff69b4);
+     transition: width 0.3s ease-out;
+ }
+
+ .navbar .nav-text ul li:hover::before {
+     width: 100%;
+ }
+
+ #toggle-btn i {
+     padding-right: 0;
+     margin-right: 110px;
+ }
+
+ .herosection {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     min-height: calc(90vh - 100px);
+     text-align: center;
+     padding: 0 20px;
+     margin-top: 10vw;
+     line-height: 20px;
+ }
+
+ .herosection .herotext h4 {
+     font-size: 1em;
+     font-weight: 400;
+ }
+
+ .herosection .herotext span {
+     background: linear-gradient(to right, #4b0082, #ff69b4);
+     -webkit-background-clip: text;
+     background-clip: text;
+     -webkit-text-fill-color: transparent;
+ }
+
+ .herosection .text1 {
+     display: block;
+     border-radius: 40px;
+     padding: 0.5em 2em;
+     background: linear-gradient(to right, #4b0082, #ff69b4);
+     font-size: 1em;
+     font-weight: 400;
+     display: inline-block;
+ }
+
+ .herosection h1 {
+     font-size: 9vh;
+     /* margin-top: 10px; */
+ }
+
+ .herosection .text2 {
+     font-size: 1em;
+ }
+
+ .herosection .herobtns button {
+     font-size: 1.1em;
+     padding: 0.7em 2.7em;
+     border-radius: 50px;
+     margin: 10px;
+     background-color: #000000;
+     border: none;
+     color: #F8FAFC;
+     cursor: pointer;
+ }
+
+ .herosection .herobtns .hrobtn1 {
+     position: relative;
+     background: #000000;
+     border: 0.2px solid rgba(248, 250, 252, 0.5);
+     background-clip: padding-box;
+     border-radius: 50px;
+     transition: all 0.3s ease-in-out;
+     z-index: 1;
+ }
+
+ .herosection .herobtns .hrobtn1::before {
+     content: '';
+     position: absolute;
+     inset: -2px;
+     border-radius: 50px;
+     z-index: -1;
+ }
+
+ .herosection .herobtns .hrobtn1:hover {
+     transform: translateY(-5px);
+     background: linear-gradient(to right, #4b0082, #ff69b4);
+     border: none;
+     color: #000000;
+ }
+
+ .herosection .herobtns .hrobtn2 {
+     border: 0.2px solid rgba(248, 250, 252, 0.5);
+     transition: all 0.3s ease-in-out;
+ }
+
+ .herosection .herobtns .hrobtn2:hover {
+     transform: translateY(-5px);
+ }
+
+ /* ------------------------------------------------------------------------------------------ */
+
+ .herosection-2 {
+     line-height: 20px;
+ }
+
+ .herosection-2 .herotext2 {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     margin-top: -5vw;
+ }
+
+ .herosection-2 h4 {
+     display: block;
+     border-radius: 40px;
+     padding: 0.5em 2em;
+     background: linear-gradient(to right, #4b0082, #ff69b4);
+     font-size: 1em;
+     font-weight: 400;
+     display: inline-block;
+ }
+
+ .herosection-2 h1 {
+     font-size: 6vh;
+ }
+
+ /* .herosection-2 .blursection h3 {
+     font-size: 2rem;
+     font-weight: 600;
+     color: #F8FAFC;
+     text-shadow: 0 0 15px rgba(75, 0, 130, 0.5),
+         0 0 30px rgba(255, 105, 180, 0.3);
+ } */
+
+ .project1 {
+     display: flex;
+ }
+
+ .herosection-2 .projectSection .project1 {
+     height: auto;
+     width: 90%;
+     border: 1px solid rgba(224, 156, 255, 0.3);
+     margin-top: 30px;
+     border-radius: 20px;
+     justify-self: center;
+ }
+
+ .herosection-2 .projectSection .project1 .image1-wrapper img {
+     height: auto;
+     width: 400px;
+     /* padding: 30px 35px; */
+     transition: 0.3s ease-in-out;
+     border-radius: 20px;
+ }
+
+ .herosection-2 .projectSection .project1 .image1-wrapper {
+     padding: 30px 35px;
+     border-radius: 10px;
+ }
+
+ .herosection-2 .projectSection .project1 .image1-wrapper img:hover {
+     transform: scale(1.04);
+ }
+
+ .projectSection .project1 .project1-text {
+     padding: 15px 30px;
+ }
+
+ .projectSection .project1 .project1-text h3 {
+     font-size: 1.7rem;
+     font-weight: 700;
+     margin-bottom: 40px;
+ }
+
+ .projectSection .project1 .project1-text h5 {
+     font-size: 1rem;
+     font-weight: 300;
+     line-height: 25px;
+     margin-bottom: 50px;
+ }
+
+ /* background-color: #1a1a1a;
+ border-radius: 50%;
+ width: 40px;
+ height: 40px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ cursor: pointer;
+ transition: all 0.3s ease-in-out;
+ box-shadow: 0 0 8px rgba(75, 0, 130, 0.3), 0 0 15px rgba(255, 105, 180, 0.2); */
+
+ .projectSection .project1 .project1-text .project1-btn-wrapper {
+     background-color: var(--bg-secondary);
+     border-radius: 50%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     width: 40px;
+     height: 40px;
+     box-shadow: 0 0 8px rgba(75, 0, 130, 0.3), 0 0 15px rgba(225, 105, 180, 0.2);
+ }
+
+ .projectSection .project1 .project1-text .project1-btn {
+     display: flex;
+     gap: 40px;
+ }
+
+
+ .projectSection .project1 .project1-text .project1-btn a i {
+     font-size: 1.6rem;
+     font-weight: 100;
+     cursor: pointer;
+ }
+
+
+
+
+
+
+
+
+
+ /* -------------------------------------------------------------------------------- */
+
+ .herosection-3 {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     margin-top: 20vh;
+     line-height: 20px;
+ }
+
+ .herosection-3 h4 {
+     display: block;
+     border-radius: 40px;
+     padding: 0.5em 2em;
+     background: linear-gradient(to right, #4b0082, #ff69b4);
+     font-size: 1em;
+     font-weight: 400;
+     display: inline-block;
+ }
+
+ .herosection-3 h1 {
+     font-size: 6vh;
+     padding-bottom: 20px;
+ }
+
+ .herosection-3 .techIcons {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border: 1px solid rgba(224, 156, 255, 0.3);
+     gap: 20px;
+     border-radius: 25px;
+     padding: 15px 15px;
+     box-shadow: 0 4px 32px 0 rgba(75, 0, 130, 0.5);
+
+
+ }
+
+ .herosection-3 .techIcons i {
+     font-size: 3rem;
+     color: var(--text-primary);
+     margin: 10px 10px;
+     vertical-align: middle;
+     transition: transform 0.5s;
+ }
+
+ .herosection-3 .techIcons i:hover {
+     transform: translateY(-5px);
+ }
+
+
+ /* --------------------------------------------------------------------------------- */
+
+ .contacttext {
+     margin-top: 20vh;
+     line-height: 20px;
+     text-align: center;
+ }
+
+ .contacttext h4 {
+     display: block;
+     border-radius: 40px;
+     padding: 0.5em 2em;
+     background: linear-gradient(to right, #4b0082, #ff69b4);
+     font-size: 1em;
+     font-weight: 400;
+     display: inline-block;
+ }
+
+ .contacttext h1 {
+     font-size: 6vh;
+ }
+
+ .contacttext h5 {
+     font-size: 1.8vh;
+     font-weight: 200;
+     padding-top: 8px;
+ }
+
+ .contactinfo {
+     display: flex;
+     flex-wrap: wrap;
+     align-items: stretch;
+     justify-content: center;
+     gap: 50px;
+     margin-top: 5vh;
+     padding: 0 20px;
+ }
+
+ .infobox {
+     flex: 1 1 400px;
+     max-width: 450px;
+     border: 0.5px solid var(--text-secondary);
+     border-radius: 20px;
+     padding: 20px;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+     transition: background-color 0.3s ease, border-color 0.3s ease;
+ }
+
+ .contactform {
+     flex: 1 1 400px;
+     max-width: 550px;
+     border: 0.5px solid var(--text-secondary);
+     border-radius: 20px;
+     padding: 20px;
+     background-color: var(--bg-primary);
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+     transition: background-color 0.3s ease, border-color 0.3s ease;
+ }
+
+ .contactform h2 {
+     padding: 10px 0;
+     font-size: 3vh;
+     font-weight: 600;
+     margin-bottom: 20px;
+ }
+
+ .contactform form label {
+     display: block;
+     margin-bottom: 5px;
+     font-size: 1.8vh;
+     font-weight: 400;
+     color: var(--text-primary);
+     transition: color 0.3s ease;
+ }
+
+ .contactform form input[type="text"],
+ .contactform form input[type="email"],
+ .contactform form textarea {
+     width: 100%;
+     padding: 12px 15px;
+     margin-bottom: 15px;
+     border: 1px solid var(--border-color);
+     border-radius: 8px;
+     background-color: var(--input-bg);
+     color: var(--text-primary);
+     font-size: 1.8vh;
+     box-sizing: border-box;
+     transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+ }
+
+ .contactform form input[type="text"]:focus,
+ .contactform form input[type="email"]:focus,
+ .contactform form textarea:focus {
+     outline: none;
+     border-color: #4b0082;
+     box-shadow: 0 0 5px rgba(75, 0, 130, 0.5);
+ }
+
+ .contactform form textarea {
+     resize: vertical;
+     min-height: 100px;
+ }
+
+ .contactinfo .infobox h2 {
+     padding: 30px 20px;
+     font-size: 3vh;
+     font-weight: 600;
+ }
+
+ .contactinfo .infobox .email {
+     display: flex;
+     padding: 15px 30px;
+     align-items: center;
+     gap: 20px;
+     justify-content: flex-start;
+ }
+
+ .contactinfo .infobox .email .icon-wrapper,
+ .contactinfo .infobox .location .icon-wrapper {
+     background-color: #1a1a1a;
+     border-radius: 50%;
+     width: 50px;
+     height: 50px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     box-shadow: 0 0 10px rgba(75, 0, 130, 0.3), 0 0 20px rgba(255, 105, 180, 0.2);
+     flex-shrink: 0;
+ }
+
+ .contactinfo .infobox .email i {
+     font-size: 1.5rem;
+     color: #F8FAFC;
+ }
+
+ .contactinfo .infobox .email .emailtext {
+     display: flex;
+     flex-direction: column;
+     gap: 2px;
+ }
+
+ .contactinfo .infobox .email .emailtext h5 {
+     font-size: 1.5vh;
+     font-weight: 200;
+     margin: 0;
+ }
+
+ .contactinfo .infobox .email .emailtext h3 {
+     font-size: 2.2vh;
+     font-weight: 400;
+     margin: 0;
+ }
+
+ .contactinfo .infobox .location {
+     display: flex;
+     padding: 15px 30px;
+     align-items: center;
+     gap: 20px;
+     justify-content: flex-start;
+ }
+
+ .contactinfo .infobox .location .locationtext {
+     display: flex;
+     flex-direction: column;
+     gap: 2px;
+ }
+
+ .contactinfo .infobox .location i {
+     font-size: 1.5rem;
+     color: #F8FAFC;
+ }
+
+ .contactinfo .infobox .location h5 {
+     font-size: 1.5vh;
+     font-weight: 200;
+     margin: 0;
+ }
+
+ .contactinfo .infobox .location h3 {
+     font-size: 2.2vh;
+     font-weight: 400;
+     margin: 0;
+ }
+
+ .contactinfo .infobox .contactlogos {
+     padding: 30px 30px;
+ }
+
+ .contactinfo .infobox .contactlogos h5 {
+     margin-bottom: 15px;
+ }
+
+ .contactinfo .infobox .social-icons {
+     display: flex;
+     gap: 15px;
+ }
+
+ .contactinfo .infobox .social-icon-wrapper {
+     background-color: #1a1a1a;
+     border-radius: 50%;
+     width: 40px;
+     height: 40px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     cursor: pointer;
+     transition: all 0.3s ease-in-out;
+     box-shadow: 0 0 8px rgba(75, 0, 130, 0.3), 0 0 15px rgba(255, 105, 180, 0.2);
+ }
+
+ .contactinfo .infobox .social-icon-wrapper:hover {
+     box-shadow: 0 0 20px rgba(75, 0, 130, 0.8), 0 0 25px rgba(255, 105, 180, 0.6);
+ }
+
+ .contactinfo .infobox .social-icons i {
+     font-size: 1.2rem;
+     color: #F8FAFC;
+ }
+
+ .contactform form button {
+     font-size: 1em;
+     padding: 10px 20px;
+     border-radius: 50px;
+     background-color: #000000;
+     border: 2px solid rgba(248, 250, 252, 0.3);
+     color: #F8FAFC;
+     cursor: pointer;
+     transition: all 0.3s ease-in-out;
+     box-shadow: none;
+
+ }
+
+ .contactform form button:hover {
+     transform: translateY(-3px);
+ }
+
+ .contactform form button i {
+     margin-right: 8px;
+ }
+
+ .footer {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     margin-top: 10px;
+     padding: 1rem 8rem;
+     background-color: var(--bg-secondary);
+     max-width: 100%;
+     max-height: 100%;
+     transition: background-color 0.3s ease;
+ }
+
+ .footer .footertext h1 {
+     font-size: 1.9em;
+     font-weight: 600;
+     background: linear-gradient(to right, #4b0082, #ff69b4);
+     -webkit-background-clip: text;
+     background-clip: text;
+     -webkit-text-fill-color: transparent;
+ }
+
+ .footer .footertext h4 {
+     font-size: 0.8em;
+     font-weight: 300;
+ }
+
+ .footericons {
+     display: flex;
+     gap: 20px;
+     align-items: center;
+ }
+
+ .footer .footericons i {
+     font-size: 1.5rem;
+     border-radius: 50%;
+     height: 40px;
+     width: 40px;
+     background-color: #1a1a1a;
+     color: #fff;
+     cursor: pointer;
+     box-shadow: 0 0 8px rgba(75, 0, 130, 0.3), 0 0 15px rgba(255, 105, 180, 0.2);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     transition: all 0.3s ease-in-out;
+ }
+
+ a {
+     color: inherit;
+     text-decoration: none;
+ }
+
+ a:visited {
+     color: inherit;
+ }
+
+ .footer .footericons i:hover {
+     color: #ac1da0;
+ }
+
+ /* .footer .endingText p {
+     font-size: 0.75rem;
+     margin-top: 6rem;
+ } */
+
+
+
+
+ /* ----------------------------------------------------------------------------------- */
+ /* Responsiveness */
+ @media (max-width: 1200px) {
+     .navbar .nav-text ul {
+         display: flex;
+         gap: 50px;
+         width: 100%;
+         list-style: none;
+         padding: 0;
+         margin: 0;
+     }
+
+     .navbar .nav-text ul li {
+         font-size: 0.9rem;
+     }
+
+     #toggle-btn i {
+         font-size: 1.3rem;
+         transform: translateY(-2px);
+     }
+
+     .navbar .logo .dev-logo {
+         font-size: 2.5rem;
+         padding-left: 100px;
+     }
+
+     .herosection {
+         margin-bottom: 1px;
+     }
+
+     .herosection {
+         min-height: 35em;
+         margin-top: 5vh;
+         line-height: 1.5;
+     }
+
+     .herosection .herotext h1 {
+         font-size: 7vh;
+     }
+
+     .herosection-2 .herotext2 {
+         margin-top: 0;
+     }
+
+     .herosection .herotext .text2 {
+         font-size: 1.05rem;
+     }
+
+     .herosection .herobtns {
+         font-size: 1.05rem;
+     }
+
+     .herosection-2 .herotext2 h1 {
+         font-size: 6vh;
+     }
+
+     .herosection-3 h1 {
+         font-size: 5.8vh;
+     }
+
+     .contacttext h1 {
+         font-size: 5.5vh;
+     }
+
+     .contacttext h5 {
+         font-size: 1.05rem;
+         font-weight: 300;
+     }
+
+     .contactinfo .infobox h2 {
+         font-weight: 500;
+     }
+
+     .contactinfo .infobox .email .icon-wrapper,
+     .contactinfo .infobox .location .icon-wrapper {
+         width: 50px;
+         height: 50px;
+         min-width: 50px;
+         min-height: 50px;
+     }
+
+     .contactinfo .infobox .email,
+     .contactinfo .infobox .location {
+         justify-content: flex-start;
+         align-items: center;
+     }
+
+
+
+     .contactinfo .infobox .contactlogos h5 {
+         font-size: 1.05rem;
+         font-weight: 400;
+     }
+
+     .contactinfo .infobox .contactlogos .social-icons .social-icon-wrapper i {
+         font-size: 1.2rem;
+     }
+
+     .contactinfo .infobox .email .emailtext h3,
+     .contactinfo .infobox .location .locationtext h3 {
+         font-weight: 300;
+         font-size: 1.25rem;
+     }
+
+     .contactform h2 {
+         font-size: 2.85vh;
+         font-weight: 500;
+     }
+
+     .contactform form label {
+         font-size: 1.07rem;
+         font-weight: 300;
+     }
+
+     .footer .footertext h1 {
+         font-size: 1.5rem;
+         font-weight: 600;
+     }
+
+ }
+
+ @media (max-width: 1024px) {
+     .navbar .nav-text ul li {
+         display: none;
+     }
+
+     .navbar .nav-text i {
+         display: block;
+         margin-left: auto;
+         margin-right: 1.5em;
+     }
+
+     #toggle-btn i {
+         font-size: 1.5rem;
+         transform: translateX(40px);
+     }
+
+     #toggle-btn,
+     .ri-menu-line {
+         margin: 0;
+         padding: 0;
+     }
+
+
+     #toggle-btn {
+         display: inline-flex;
+         align-items: center;
+     }
+
+
+     .navbar .nav-text ul {
+         gap: 10px;
+         justify-content: flex-end;
+         margin-right: 40px;
+
+     }
+
+
+     .navbar .nav-text ul li:not(:last-child) {
+         margin-right: 20px;
+
+     }
+
+
+     #toggle-btn+.ri-menu-line {
+         margin-left: 6px;
+     }
+
+     .navbar .nav-text .ri-close-fill {
+         display: none;
+     }
+
+     .herosection .herotext h1 {
+         font-size: 6.5vh;
+     }
+
+     .herosection-2 .herotext2 h1 {
+         font-size: 5.3vh;
+
+     }
+
+     .herosection-3 h1 {
+         font-size: 5.3vh;
+     }
+
+     .herosection-3 .techIcons i {
+         font-size: 2.5rem;
+         box-shadow: 0 4px 32px 0 rgba(75, 0, 130, 0.8);
+     }
+
+     .contacttext h1 {
+         font-size: 5.3vh;
+     }
+
+     .contactinfo .infobox .email .emailtext h5,
+     .contactinfo .infobox .location .locationtext h5 {
+         font-size: 1.1em;
+         font-weight: 300;
+     }
+
+     /* <---------------Hamburger Menu -------------> */
+     .navbar .nav-text.active {
+         position: fixed;
+         top: 0;
+         right: 0;
+         width: 40%;
+         height: 100vh;
+         z-index: 1000;
+         background-color: var(--bg-primary);
+         box-shadow: 1px 0 20px rgba(75, 0, 130, 0.8);
+         animation: slideIn 0.3s ease-in-out;
+         display: flex;
+         flex-direction: column;
+         align-items: center; 
+         padding: 70px 30px 30px 60px;
+     }
+
+     .navbar .nav-text .ri-close-fill {
+        position: absolute;
+        top: 20px;
+        right: 22.3rem;
+        font-size: 1.7rem;
+        cursor: pointer;
+        z-index: 1001;
+     }
+
+     .navbar .nav-text.active ul li {
+        display: block;
+        font-size: 1.2rem;
+     }
+
+     .navbar .nav-text.active #toggle-btn{
+        display: none;
+     }
+
+     .navbar .nav-text.active ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 50px 20px 30px 30px;
+     }
+
+     .menu-open .navbar .nav-text .ri-close-fill {
+        display: block;
+     }
+
+     .menu-open .navbar .nav-text .ri-menu-line{
+        display: none;
+     }
+
+     @keyframes slideIn {
+         from {
+             transform: translateX(100%);
+         }
+
+         to {
+             transform: translateX(0%);
+         }
+     }
+
+     /* @keyframes slideOut {
+        from{
+            transform: translateX(0%);
+        }
+        to {
+            transform: translateX(100%);
+        }
+     }
+
+     .navbar .nav-text.closing {
+        animation: slideOut 0.3s ease-in-out;
+     } */
+
+     .navbar .nav-text .ri-close-fill {
+        font-size: 2.5rem;
+        font-weight: 600;
+     }
+ }
+
+ @media (max-width: 768px) {
+     .navbar .logo .dev-logo {
+         font-size: 2rem;
+     }
+
+     .navbar .nav-text ul i {
+         font-size: 1.5rem;
+     }
+
+     .herosection {
+         line-height: 20px;
+         min-height: 25em;
+         margin-top: 5vh;
+
+     }
+
+     .herosection .herotext .text1 {
+         font-size: 0.85rem;
+     }
+
+     .herosection .herotext h1 {
+         font-size: 2.8rem;
+     }
+
+     .herosection .herotext .text2 {
+         font-size: 0.98rem;
+         font-weight: 300;
+     }
+
+     .herosection .herobtns {
+         font-size: 0.9rem;
+     }
+
+     .herosection-2 {
+         line-height: 20px;
+     }
+
+     .herosection-2 .herotext2 h4 {
+         font-size: 0.85rem;
+     }
+
+     .herosection-2 .herotext2 h1 {
+         font-size: 2.5rem;
+         font-weight: 600;
+     }
+
+     .herosection-3 {
+         line-height: 20px;
+     }
+
+     .herosection-3 h4 {
+         font-size: 0.85rem;
+     }
+
+     .herosection-3 h1 {
+         font-size: 2.4rem;
+         font-weight: 600;
+     }
+
+     .herosection-3 .techIcons {
+         padding: 10px 10px;
+     }
+
+     .contacttext {
+         line-height: 20px;
+     }
+
+     .contacttext h4 {
+         font-size: 0.85rem;
+     }
+
+     .contacttext h1 {
+         font-size: 2.3rem;
+         font-weight: 600;
+     }
+
+     .contacttext h5 {
+         font-size: 1em;
+         font-weight: 300;
+     }
+
+     .contactinfo .infobox h2 {
+         font-size: 1.2rem;
+         font-weight: 500;
+     }
+
+     /* .contactinfo .infobox .email i{
+        font-size: 1rem;
+     }
+
+     .contactinfo .infobox .location i{
+        font-size: 1rem;
+     } */
+
+     .contactinfo .infobox .email .emailtext h5,
+     .contactinfo .infobox .location .locationtext h5 {
+         font-size: 0.85rem;
+         font-weight: 500;
+     }
+
+     .contactinfo .infobox .email .emailtext h3,
+     .contactinfo .infobox .location .locationtext h3 {
+         font-size: 1.05rem;
+     }
+
+     .contactinfo .infobox .contactlogos h5 {
+         font-weight: 500;
+     }
+
+     .contactinfo .contactform h2 {
+         font-size: 1.3rem;
+         font-weight: 500;
+     }
+
+     .contactinfo .contactform form label {
+         font-size: 0.95rem;
+         font-weight: 300;
+     }
+
+     .contactinfo .contactform button {
+         font-size: 0.9rem;
+     }
+
+     .footer {
+         display: flex;
+         align-items: center;
+         justify-content: space-evenly;
+         gap: 15vw;
+     }
+
+     .footer .footertext h1 {
+         font-size: 1rem;
+     }
+
+     .footer .footertext h1 {
+         font-size: 1.1rem;
+     }
+
+     .footer .footericons {
+         gap: 15px;
+     }
+
+     .footer .footericons i {
+         font-size: 1.3rem;
+         height: 28px;
+         width: 28px;
+         background-color: transparent !important;
+         color: var(--text-primary) !important;
+         box-shadow: none !important;
+     }
+
+     .footer .endingText {
+         display: flex;
+         flex-direction: column;
+     }
+
+ }
+
+ @media (max-width: 576px) {
+     .navbar .logo .dev-logo {
+         font-size: 1.8rem;
+         padding-left: 3.5rem;
+     }
+
+     .navbar .nav-text ul i {
+         font-size: 1.4rem;
+     }
+
+
+     #toggle-btn+.ri-menu-line {
+         margin-left: -2px;
+     }
+
+     .herosection .herotext .text1 {
+         font-size: 0.8rem;
+         font-weight: 300;
+         padding: 0.5em 1.5em;
+     }
+
+     .herosection .herotext h1 {
+         font-size: 2.2rem;
+     }
+
+     .herosection .herotext .text2 {
+         font-size: 0.84rem;
+         font-weight: 300;
+     }
+
+     .herosection .herobtns button {
+         font-size: 0.9rem;
+     }
+
+     .herosection-2 .herotext2 h4 {
+         font-size: 0.8rem;
+         font-weight: 300;
+         padding: 0.5em 1.5em;
+     }
+
+     .herosection-2 .herotext2 h1 {
+         font-size: 2.2rem;
+         font-weight: 600;
+     }
+
+     .herosection-3 h4 {
+         font-size: 0.8rem;
+         font-weight: 300;
+         padding: 0.5em 1.5em;
+     }
+
+     .herosection-3 h1 {
+         font-size: 2.1rem;
+         font-weight: 600;
+     }
+
+     .herosection-3 .techIcons i {
+         font-size: 2.15rem;
+     }
+
+     .contacttext h4 {
+         font-size: 0.8rem;
+         font-weight: 300;
+         padding: 0.5em 1.5em;
+     }
+
+     .contacttext h1 {
+         font-size: 2.1rem;
+         font-weight: 600;
+     }
+
+     .contacttext h5 {
+         font-size: 0.85rem;
+         font-weight: 200;
+     }
+
+     .footer {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         gap: 35vw;
+     }
+
+     .footer .footertext h1 {
+         font-size: 1.3rem;
+     }
+ }
+
+ @media (max-width: 390px) {
+     .navbar .nav-text ul #toggle-btn i {
+         margin-right: 65px;
+     }
+ }
+
+ @media (min-width: 381px) and (max-width: 460px) {
+     .navbar .logo .dev-logo {
+         font-size: 1.6rem;
+         padding-left: 2.5rem;
+     }
+
+     .navbar .nav-text ul i {
+         font-size: 1.4rem;
+         margin-left: 5rem;
+     }
+
+     .herosection {
+         margin-top: 8vh;
+     }
+
+     .herosection .herotext .text1 {
+         font-size: 0.75rem;
+         padding: 0.4em 1.2em;
+     }
+
+     .herosection .herotext h1 {
+         font-size: 2rem;
+     }
+
+     .herosection .herotext .text2 {
+         font-size: 0.82rem;
+         font-weight: 300;
+     }
+
+     .herosection .herobtns button {
+         font-size: 0.8rem;
+     }
+
+     .herosection-2 {
+         padding: 0px 20px;
+     }
+
+     .herosection-2 .herotext2 h4 {
+         font-size: 0.72rem;
+         padding: 0.4em 1.2em;
+     }
+
+     .herosection-2 .herotext2 h1 {
+         font-size: 2rem;
+     }
+
+     .herosection-3 {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         padding: 0px 20px;
+     }
+
+     .herosection-3 h4 {
+         font-size: 0.72rem;
+         padding: 0.4em 1.2em;
+     }
+
+     .herosection-3 h1 {
+         font-size: 2rem;
+         text-align: center;
+         line-height: 1.2em;
+     }
+
+     .herosection-3 .techIcons i {
+         font-size: 1.5rem;
+     }
+
+     .contacttext {
+         padding: 0px 20px;
+     }
+
+     .contacttext h4 {
+         font-size: 0.72rem;
+         padding: 0.4em 1.2em;
+     }
+
+     .contacttext h1 {
+         font-size: 2rem;
+         text-align: center;
+         line-height: 1.2em;
+     }
+
+     .contacttext h5 {
+         font-size: 0.85rem;
+         font-weight: 300;
+     }
+
+     .contactinfo {
+         padding: 0px 20px;
+     }
+
+     .contactinfo .contactform h2 {
+         font-size: 1.2rem;
+     }
+
+     .contactinfo .contactform form label {
+         font-size: 0.8rem;
+     }
+
+     .contactinfo .contactform form button {
+         font-size: 0.85rem;
+         padding: 8px 15px;
+     }
+
+     .footer {
+         padding: 1rem 2.5rem;
+     }
+
+     .footer .footertext h1 {
+         font-size: 1.1rem;
+     }
+
+     .footer .footericons {
+         gap: 12px;
+     }
+
+     .footer .footericons i {
+         font-size: 1.25rem;
+     }
+
+     .contactinfo .infobox {
+         flex: 1 1 350px;
+         max-width: 345px;
+     }
+
+     .contactinfo .infobox .email,
+     .contactinfo .infobox .location {
+         transform: translateX(-1.5em);
+     }
+
+
+ }
+
+ @media (max-width: 380px) {
+
+     .navbar .nav-text ul #toggle-btn i {
+         margin-right: 60px;
+     }
+
+     .herosection-3 .techIcons,
+     .contactinfo .infobox {
+         box-sizing: border-box;
+     }
+
+     .herosection-3 .techIcons {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         /* flex-wrap: wrap; */
+         /* max-width: 95vw;
+         width: 95vw; */
+         gap: 8px;
+         padding: 0 1.5rem;
+         /* box-sizing: border-box; */
+     }
+
+     .herosection-3 .techIcons i {
+         min-width: 0;
+         flex-shrink: 1;
+         font-size: 1.1rem;
+     }
+
+     .contactinfo .infobox {
+         max-width: 85vw;
+         width: 85vw;
+     }
+
+     .contactinfo .infobox .email .emailtext h3,
+     .contactinfo .infobox .location .locationtext h3 {
+         font-size: 0.8rem;
+         font-weight: 300;
+     }
+
+     .contactinfo .infobox .email .emailtext h5,
+     .contactinfo .infobox .location .locationtext h5 {
+         font-size: 0.75rem;
+         font-weight: 400;
+     }
+
+     .contactinfo .infobox .email .emailtext h3 {
+         font-size: 0.8rem;
+     }
+
+     .contactinfo .infobox .email .icon-wrapper,
+     .contactinfo .infobox .location .icon-wrapper {
+         width: 40px;
+         height: 40px;
+     }
+
+     .contactinfo .infobox .email .icon-wrapper i,
+     .contactinfo .infobox .location .icon-wrapper i {
+         font-size: 1.1rem;
+     }
+
+     .contactinfo .infobox .email,
+     .contactinfo .infobox .location {
+         transform: translateX(-1.5em);
+     }
+
+
+     .navbar .logo .dev-logo {
+         font-size: 1.5rem;
+         padding-left: 2rem;
+     }
+
+     .navbar .nav-text ul i {
+         font-size: 1.35rem;
+         margin-left: 6rem;
+     }
+
+     .herosection {
+         margin-top: 10vh;
+     }
+
+     .herosection .herotext .text1 {
+         font-size: 0.7rem;
+         padding: 0.3em 1em;
+     }
+
+     .herosection .herotext h1 {
+         font-size: 1.9rem;
+     }
+
+     .herosection .herotext .text2 {
+         font-size: 0.8rem;
+         font-weight: 300;
+     }
+
+     .herosection .herobtns button {
+         font-size: 0.75rem;
+     }
+
+     .herosection-2 {
+         padding: 0px 20px;
+     }
+
+     .herosection-2 .herotext2 h4 {
+         font-size: 0.75rem;
+         padding: 0.3em 1em;
+     }
+
+     .herosection-2 .herotext2 h1 {
+         font-size: 1.9rem;
+     }
+
+     .herosection-3 {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         padding: 0px 20px;
+     }
+
+     .herosection-3 h4 {
+         font-size: 0.75rem;
+         padding: 0.3em 1em;
+     }
+
+     .herosection-3 h1 {
+         font-size: 1.9rem;
+         text-align: center;
+         line-height: 1.2em;
+     }
+
+     .herosection-3 .techIcons i {
+         font-size: 1.4rem;
+     }
+
+     .contacttext h4 {
+         font-size: 0.75rem;
+         padding: 0.3em 1em;
+     }
+
+     .contacttext h1 {
+         font-size: 1.9rem;
+         text-align: center;
+         line-height: 1.2em;
+     }
+
+     .contacttext h5 {
+         font-size: 0.8rem;
+         font-weight: 300;
+     }
+
+     .contactinfo {
+         padding: 0px 20px;
+     }
+
+     .contactinfo .contactform h2 {
+         font-size: 1.1rem;
+     }
+
+     .contactinfo .contactform form label {
+         font-size: 0.75rem;
+     }
+
+     .contactinfo .contactform form button {
+         font-size: 0.8rem;
+         padding: 5px 10px;
+     }
+
+     .footer {
+         padding: 1rem 2rem;
+     }
+
+     .footer .footertext h1 {
+         font-size: 1rem;
+     }
+
+     .footer .footericons {
+         gap: 10px;
+     }
+
+     .footer .footericons i {
+         font-size: 1.2rem;
+         /* height: 28px;
+         width: 28px; */
+     }
+ }
+
+ @media (max-width: 360px) {
+     .navbar .nav-text ul i {
+         transform: translateX(-1.5em);
+     }
+
+     .navbar .nav-text ul #toggle-btn i {
+         margin-right: 95px;
+     }
+
+     .navbar .nav-text ul i {
+         margin-right: -8px;
+     }
+
+     .contactinfo .infobox .email,
+     .contactinfo .infobox .location {
+         transform: translateX(-2.1rem);
+     }
+
+     .footer {
+         padding: 1rem 3rem;
+     }
+ }

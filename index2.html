@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> tanmay.tech </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <h1 class="dev-logo">Tanmay</h1>
+        </div>
+        <div class="nav-text">
+            <ul>
+                <a href="#home">
+                    <li>Home</li>
+                </a>
+                <a href="#contact">
+                    <li>Talk</li>
+                </a>
+                <a href="#projects">
+                    <li>Projects</li>
+                </a>
+                <a href="#tech">
+                    <li>Tech</li>
+                </a>
+                <div id="toggle-btn">
+                    <i class="ri-sun-fill" aria-hidden="true"></i>
+                    <i class="ri-moon-fill" aria-hidden="true" style="display: none;"></i>
+                </div>
+            </ul>
+            <i class="ri-menu-line" aria-label="Menu" title="Menu"></i>
+            <i class="ri-close-fill" aria-label="Close" title="Close"Fmed></i>
+        </div>
+    </div>
+    <div class="herosection" id="home">
+        <div class="herotext">
+            <h4 class="text1"> Frontend Developer </h4>
+            <h1> Hi, I'm <span>Tanmay</span> </h1>
+            <h4 class="text2"> Proficient in building Landing Pages and Frontend Webpages </h4>
+        </div>
+        <div class="herobtns">
+            <a href="#hireMe"><button class="hrobtn1"> Hire Me </button></a>
+            <a href="#myWork"><button class="hrobtn2"> My Work </button></a>
+        </div>
+    </div>
+    <div class="herosection-2" id="projects">
+        <div class="herotext2" id="myWork">
+            <h4> Featured Work </h4>
+            <h1> My Recent Projects </h1>
+        </div>
+        <div class="projectSection">
+            <div class="project1">
+                <div class="image1-wrapper">
+                    <img src="project1-ss.png">
+                </div>
+                <div class="project1-text">
+                    <h3> Travel Website Clone (Inspired by Liberty Travel)</h3>
+                    <h5> I created a clone of the Liberty Travel website using HTML, CSS, and JavaScript. Through this
+                        project, I gained hands-on experience with layout techniques, element positioning, and building
+                        responsive web pages. It was a great opportunity to apply and reinforce my front-end development
+                        skills in a real-world context.
+                    </h5>
+                    <div class="project1-btn">
+                        <div class="project1-btn-wrapper"><a href="https://travel-clone-nine.vercel.app/"
+                                target="_blank" title="View Live"><i class="ri-eye-fill"></i></a></div>
+                        <div class="project1-btn-wrapper"><a href="https://github.com/TanmayK-glitch/Travel-Clone.git"
+                                target="_blank" title="View code"><i class="ri-code-s-line"></i></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="herosection-3" id="tech">
+        <h4> Tech Stack</h4>
+        <h1> My Tools And Technologies</h1>
+        <div class="techIcons">
+            <i class="fa-brands fa-html5" title="HTML5"></i>
+            <i class="fa-brands fa-css3-alt" title="CSS"></i>
+            <i class="fa-brands fa-js" title="JavaScript"></i>
+            <i class="ri-tailwind-css-fill" title="Tailwind CSS"></i>
+            <i class="fa-brands fa-git-alt" title="Git"></i>
+            <i class="fa-brands fa-square-github" title="GitHub"></i>
+        </div>
+    </div>
+
+
+    <div class="contacttext">
+        <h4> Get In Touch </h4>
+        <h1> Contact Me </h1>
+        <h5> Available for Freelance Work - Drop me a message to collaborate!</h5>
+    </div>
+    <div class="contactinfo" id="contact">
+        <div class="infobox">
+            <h2> Contact Information </h2>
+            <div class="email">
+                <div class="icon-wrapper"><i class="fa-solid fa-envelope"></i></div>
+                <div class="emailtext">
+                    <h5> Email </h5>
+                    <h3> tanmaykangule7271@gmail.com</h3>
+                </div>
+            </div>
+            <div class="location">
+                <div class="icon-wrapper"><i class="fa-solid fa-location-dot"></i></div>
+                <div class="locationtext">
+                    <h5> Location </h5>
+                    <h3> Pune, India </h3>
+                </div>
+            </div>
+            <div class="contactlogos">
+                <h5> Connect With Me </h5>
+                <div class="social-icons">
+                    <div class="social-icon-wrapper"><a href="https://github.com/TanmayK-glitch/Projects"
+                            target="_blank"><i class="fa-brands fa-github"></i></a></div>
+                    <div class="social-icon-wrapper"><a href="https://www.linkedin.com/in/tanmay-kangule-921234338/"
+                            target="_blank"><i class="fa-brands fa-linkedin-in"></a></i></div>
+                    <div class="social-icon-wrapper"><a href="https://x.com/Ktanmay19" target="_blank"><i
+                                class="fa-brands fa-twitter"></i></a></div>
+                </div>
+            </div>
+        </div>
+        <div class="contactform" id="hireMe">
+            <h2> Send Me a Message </h2>
+            <form action="https://formspree.io/f/movlalbn" method="POST">
+                <label for="fname"> Name </label>
+                <input type="text" id="fname" name="fname" class="inputText">
+                <label for="email"> Email </label>
+                <input type="email" id="email" name="email" class="inputText">
+                <label for="sub"> Subject </label>
+                <input type="text" id="sub" name="sub" class="inputText">
+                <label for="message"> Message</label>
+                <textarea id="message" name="message" class="inputText"> </textarea>
+                <button type="submit" class="send-message-btn"><i class="fa-solid fa-paper-plane"></i> Send
+                    Message</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footertext">
+            <h1> Tanmay Kangule </h1>
+        </div>
+        <div class="footericons">
+            <a href="https://x.com/Ktanmay19" target="_blank"><i class="fa-brands fa-twitter" title="Twitter"></i></a>
+            <a href="https://github.com/TanmayK-glitch/Projects" target="_blank"><i class="fa-brands fa-github"
+                    title="Github"></i></a>
+            <a href="https://www.linkedin.com/in/tanmay-kangule-921234338/" target="_blank"><i
+                    class="fa-brands fa-linkedin-in" title="Linkedin"></i></a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+<!--------
+Hey myself Tanmay, i'm a 2nd year student persuing my Btech in CSE. I sometimes write code without a coffee, its probability is same as finding am electron in Wave Packet (very less). 
+In my free time I like to read, play games. You can see my work below.
+-->
