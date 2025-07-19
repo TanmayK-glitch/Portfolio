@@ -105,20 +105,20 @@ document.addEventListener('DOMContentLoaded', function () {
     const sunIcon = document.querySelector('.ri-sun-fill');
     const moonIcon = document.querySelector('.ri-moon-fill');
 
-    // Check for saved theme preference or default to dark mode
     const currentTheme = localStorage.getItem('theme') || 'dark';
     document.documentElement.setAttribute('data-theme', currentTheme);
     updateThemeIcon(currentTheme);
 
-    toggleButton.addEventListener('click', function () {
+    sunIcon.addEventListener('click', toggleTheme);
+    moonIcon.addEventListener('click', toggleTheme);
+
+    function toggleTheme() {
         const currentTheme = document.documentElement.getAttribute('data-theme');
         const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-
-        // Set the new theme
         document.documentElement.setAttribute('data-theme', newTheme);
         localStorage.setItem('theme', newTheme);
         updateThemeIcon(newTheme);
-    });
+    }
 
     function updateThemeIcon(theme) {
         if (theme === 'light') {

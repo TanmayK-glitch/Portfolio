@@ -746,6 +746,23 @@
          font-size: 6vh;
      }
 
+     .herosection-2 .projectSection .project1 .project1-text h3 {
+         font-size: 1.7rem;
+         line-height: 3rem;
+         margin-top: 13px;
+         margin-bottom: 10px;
+         font-weight: 600;
+     }
+
+     .herosection-2 .projectSection .project1 .project1-text h5 {
+         margin-bottom: 25px;
+         font-size: 1.05rem;
+     }
+
+     .herosection-2 .projectSection .project1 .project1-text .project1-btn a i {
+         font-size: 1.4rem;
+     }
+
      .herosection-3 h1 {
          font-size: 5.8vh;
      }
@@ -868,7 +885,24 @@
 
      .herosection-2 .herotext2 h1 {
          font-size: 5.3vh;
+     }
 
+     .herosection-2 .projectSection .project1 .project1-text h3 {
+         font-size: 1.5rem;
+         line-height: 2.5rem;
+         margin-top: 13px;
+         margin-bottom: 9px;
+         font-weight: 600;
+     }
+
+     .herosection-2 .projectSection .project1 .project1-text h5 {
+         margin-bottom: 25px;
+         font-size: 1.05rem;
+         font-weight: 200;
+     }
+
+     .herosection-2 .projectSection .project1 .project1-text .project1-btn a i {
+         font-size: 1.4rem;
      }
 
      .herosection-3 h1 {
@@ -903,42 +937,33 @@
          animation: slideIn 0.3s ease-in-out;
          display: flex;
          flex-direction: column;
-         align-items: center; 
+         align-items: center;
          padding: 70px 30px 30px 60px;
      }
 
-     .navbar .nav-text .ri-close-fill {
-        position: absolute;
-        top: 20px;
-        right: 22.3rem;
-        font-size: 1.7rem;
-        cursor: pointer;
-        z-index: 1001;
-     }
-
      .navbar .nav-text.active ul li {
-        display: block;
-        font-size: 1.2rem;
+         display: block;
+         font-size: 1.2rem;
      }
 
-     .navbar .nav-text.active #toggle-btn{
-        display: none;
+     .navbar .nav-text.active #toggle-btn {
+         display: none;
      }
 
      .navbar .nav-text.active ul {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 20px;
-        padding: 50px 20px 30px 30px;
+         display: flex;
+         flex-direction: column;
+         align-items: flex-start;
+         gap: 20px;
+         padding: 50px 20px 30px 30px;
      }
 
      .menu-open .navbar .nav-text .ri-close-fill {
-        display: block;
+         display: block;
      }
 
-     .menu-open .navbar .nav-text .ri-menu-line{
-        display: none;
+     .menu-open .navbar .nav-text .ri-menu-line {
+         display: none;
      }
 
      @keyframes slideIn {
@@ -965,8 +990,12 @@
      } */
 
      .navbar .nav-text .ri-close-fill {
-        font-size: 2.5rem;
-        font-weight: 600;
+         position: absolute;
+         top: 20px;
+         right: 22.3rem;
+         font-size: 1.7rem;
+         cursor: pointer;
+         z-index: 1001;
      }
  }
 
@@ -1014,6 +1043,37 @@
      .herosection-2 .herotext2 h1 {
          font-size: 2.5rem;
          font-weight: 600;
+     }
+
+     .herosection-2 .projectSection .project1 {
+         display: flex;
+         flex-direction: column;
+     }
+
+     .herosection-2 .projectSection .project1 .image1-wrapper {
+         align-self: flex-start;
+     }
+
+     .herosection-2 .projectSection .project1 .project1-text {
+         text-align: left;
+     }
+
+     .herosection-2 .projectSection .project1 .project1-text h3 {
+         font-size: 1.45rem;
+         line-height: 2.5rem;
+         margin-top: 1px;
+         margin-bottom: 9px;
+         font-weight: 600;
+     }
+
+     .herosection-2 .projectSection .project1 .project1-text h5 {
+         margin-bottom: 25px;
+         font-size: 0.87rem;
+         font-weight: 300;
+     }
+
+     .herosection-2 .projectSection .project1 .project1-text .project1-btn a i {
+         font-size: 1.2rem;
      }
 
      .herosection-3 {
@@ -1131,7 +1191,6 @@
  @media (max-width: 576px) {
      .navbar .logo .dev-logo {
          font-size: 1.8rem;
-         padding-left: 3.5rem;
      }
 
      .navbar .nav-text ul i {
@@ -1171,6 +1230,32 @@
      .herosection-2 .herotext2 h1 {
          font-size: 2.2rem;
          font-weight: 600;
+     }
+
+     .herosection-2 .projectSection .project1 .image1-wrapper {
+         align-self: center;
+     }
+
+     .herosection-2 .projectSection .project1 .project1-text {
+         text-align: center;
+     }
+
+     .herosection-2 .projectSection .project1 .project1-text h3 {
+         font-size: 1.25rem;
+         line-height: 2rem;
+         margin-top: 1px;
+         margin-bottom: 5px;
+         font-weight: 600;
+     }
+
+     .herosection-2 .projectSection .project1 .project1-text h5 {
+         margin-bottom: 25px;
+         font-size: 0.8rem;
+         font-weight: 300;
+     }
+
+     .herosection-2 .projectSection .project1 .project1-text .project1-btn a i {
+         font-size: 1.15rem;
      }
 
      .herosection-3 h4 {
@@ -1213,6 +1298,78 @@
 
      .footer .footertext h1 {
          font-size: 1.3rem;
+     }
+
+     .navbar .nav-text.active {
+         width: 100vw;
+         min-width: unset;
+         max-width: unset;
+         left: 0;
+         right: 0;
+         padding: 70px 10px 30px 10px;
+     }
+ }
+
+ @media (max-width: 500px) {
+     /*     
+    .herosection-2 .projectSection .project1 .image1-wrapper {
+        align-self: center;
+     }
+
+     .herosection-2 .projectSection .project1 .project1-text {
+        text-align: center;
+     }
+
+     .herosection-2 .projectSection .project1 .project1-text h3 {
+        font-size: 1.25rem;
+        line-height: 2rem;
+        margin-top: 1px;      
+        margin-bottom: 5px;
+        font-weight: 600;
+    }
+
+    .herosection-2 .projectSection .project1 .project1-text h5 {
+        margin-bottom: 25px;
+        font-size: 0.8rem;
+        font-weight: 300;
+    }
+
+    .herosection-2 .projectSection .project1 .project1-text .project1-btn a i  {
+       font-size: 1.15rem;
+    } */
+
+     .herosection-2 .projectSection .project1 .image1-wrapper img {
+         height: auto;
+         width: 350px;
+         border-radius: 15px;
+     }
+ }
+
+ @media (max-width: 450px) {
+     .herosection-2 .projectSection .project1 .image1-wrapper img {
+         height: auto;
+         width: 310px;
+         border-radius: 14px;
+     }
+
+     .herosection-2 .projectSection .project1 .image1-wrapper {
+         padding: 30px 10px;
+     }
+ }
+
+ @media (max-width: 400px) {
+     .herosection-2 .projectSection .project1 .image1-wrapper img {
+         height: auto;
+         width: 290px;
+         border-radius: 14px;
+     }
+
+     .herosection-2 .projectSection .project1 .image1-wrapper {
+         padding: 20px 10px;
+     }
+
+     .herosection-2 .projectSection .project1 {
+         margin-top: 20px;
      }
  }
 
@@ -1553,6 +1710,20 @@
 
      .navbar .nav-text ul i {
          margin-right: -8px;
+     }
+
+     .herosection-2 .projectSection .project1 .image1-wrapper img {
+         height: auto;
+         width: 260px;
+         border-radius: 14px;
+     }
+
+     .herosection-2 .projectSection .project1 .image1-wrapper {
+         padding: 15px 20px;
+     }
+
+     .herosection-2 .projectSection .project1 {
+         margin-top: 20px;
      }
 
      .contactinfo .infobox .email,
