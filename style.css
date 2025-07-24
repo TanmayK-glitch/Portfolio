@@ -26,8 +26,8 @@
  body {
      margin: 0;
      padding: 0;
-     background-color: var(--bg-primary);
      color: var(--text-primary);
+     background-color: var(--bg-primary);
      overflow-x: hidden;
      transition: background-color 0.3s ease, color 0.3s ease;
      scroll-behavior: smooth;
@@ -37,6 +37,17 @@
      display: flex;
      justify-content: space-between;
      max-height: 100px;
+     width: 100%;
+     position: fixed;
+     top: 0;
+     left: 0;
+     z-index: 1000;
+     background-color: rgb(0, 0, 0, 0.3);
+     backdrop-filter: blur(12px);
+ }
+
+ [data-theme="light"] .navbar {
+     background-color: rgb(255, 255, 255, 0.5);
  }
 
  .dev-logo {
@@ -272,12 +283,12 @@
  }
 
  .projectSection .project1 .project1-text {
-     padding: 15px 30px;
+     padding: 45px 30px;
  }
 
  .projectSection .project1 .project1-text h3 {
-     font-size: 1.7rem;
-     font-weight: 700;
+     font-size: 1.5rem;
+     font-weight: 600;
      margin-bottom: 40px;
  }
 
@@ -299,7 +310,7 @@
  transition: all 0.3s ease-in-out;
  box-shadow: 0 0 8px rgba(75, 0, 130, 0.3), 0 0 15px rgba(255, 105, 180, 0.2); */
 
- .projectSection .project1 .project1-text .project1-btn-wrapper {
+ /* .projectSection .project1 .project1-text .project1-btn-wrapper {
      background-color: var(--bg-secondary);
      border-radius: 50%;
      display: flex;
@@ -308,26 +319,39 @@
      width: 40px;
      height: 40px;
      box-shadow: 0 0 8px rgba(75, 0, 130, 0.3), 0 0 15px rgba(225, 105, 180, 0.2);
- }
+ } */
 
  .projectSection .project1 .project1-text .project1-btn {
      display: flex;
-     gap: 40px;
+     gap: 30px;
  }
 
-
- .projectSection .project1 .project1-text .project1-btn a i {
-     font-size: 1.6rem;
-     font-weight: 100;
+ .project1-btn .project1-btn-wrapper {
+     padding: 9px 9px;
+     border: 1px solid rgba(224, 156, 255, 0.3);
+     border-radius: 2px;
      cursor: pointer;
  }
 
+ .projectSection .project1 .project1-text .project1-btn a i {
+     font-size: 1.1rem;
+     font-weight: 400;
+ }
 
+ .projectSection .project1 .project1-text .project1-btn span {
+     font-size: 0.90rem;
+ }
 
+ /* .herosection-2 .projectSection .project1 .project1-text .project1-btn a i {
+    font-size: 1.2rem;
+} */
 
-
-
-
+ .icon-link {
+     display: inline-flex;
+     align-items: center;
+     gap: 8px;
+     /* Adjust the gap as needed */
+ }
 
 
  /* -------------------------------------------------------------------------------- */
@@ -374,11 +398,11 @@
      color: var(--text-primary);
      margin: 10px 10px;
      vertical-align: middle;
-     transition: transform 0.5s;
+     transition: transform 0.3s;
  }
 
  .herosection-3 .techIcons i:hover {
-     transform: translateY(-5px);
+     transform: scale(1.2);
  }
 
 
@@ -463,7 +487,7 @@
      width: 100%;
      padding: 12px 15px;
      margin-bottom: 15px;
-     border: 1px solid var(--border-color);
+     border: 1px solid var(--border-primary);
      border-radius: 8px;
      background-color: var(--input-bg);
      color: var(--text-primary);
@@ -722,7 +746,7 @@
 
      .herosection {
          min-height: 35em;
-         margin-top: 5vh;
+         margin-top: 130px;
          line-height: 1.5;
      }
 
@@ -757,10 +781,6 @@
      .herosection-2 .projectSection .project1 .project1-text h5 {
          margin-bottom: 25px;
          font-size: 1.05rem;
-     }
-
-     .herosection-2 .projectSection .project1 .project1-text .project1-btn a i {
-         font-size: 1.4rem;
      }
 
      .herosection-3 h1 {
@@ -850,12 +870,10 @@
          padding: 0;
      }
 
-
      #toggle-btn {
          display: inline-flex;
          align-items: center;
      }
-
 
      .navbar .nav-text ul {
          gap: 10px;
@@ -864,12 +882,10 @@
 
      }
 
-
      .navbar .nav-text ul li:not(:last-child) {
          margin-right: 20px;
 
      }
-
 
      #toggle-btn+.ri-menu-line {
          margin-left: 6px;
@@ -902,8 +918,12 @@
      }
 
      .herosection-2 .projectSection .project1 .project1-text .project1-btn a i {
-         font-size: 1.4rem;
+         font-size: 1rem;
      }
+
+     .projectSection .project1 .project1-text .project1-btn span {
+        font-size: 0.85rem;
+    }
 
      .herosection-3 h1 {
          font-size: 5.3vh;
@@ -1182,6 +1202,10 @@
          margin-left: -2px;
      }
 
+     .herosection .herotext {
+         margin-top: 90px;
+     }
+
      .herosection .herotext .text1 {
          font-size: 0.8rem;
          font-weight: 300;
@@ -1219,6 +1243,14 @@
      .herosection-2 .projectSection .project1 .project1-text {
          text-align: center;
      }
+
+     .herosection-2 .projectSection .project1 .project1-btn {
+        justify-content: center;
+     }
+
+     .projectSection .project1 .project1-text .project1-btn span {
+        font-size: 0.80rem;
+    }
 
      .herosection-2 .projectSection .project1 .project1-text h3 {
          font-size: 1.25rem;
@@ -1470,6 +1502,10 @@
 
  @media (max-width: 380px) {
 
+     .herosection .herotext {
+         margin-top: 50px;
+     }
+
      .navbar .nav-text ul #toggle-btn i {
          margin-right: 60px;
      }
@@ -1666,6 +1702,14 @@
      .navbar .nav-text ul i {
          margin-right: -8px;
      }
+
+     .herosection-2 .projectSection .project1 .project1-text .project1-btn a i {
+        font-size: 0.95rem;
+    }
+
+    .projectSection .project1 .project1-text .project1-btn span {
+       font-size: 0.80rem;
+   }
 
      .herosection-2 .projectSection .project1 .image1-wrapper img {
          height: auto;
