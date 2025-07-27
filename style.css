@@ -24,7 +24,7 @@
 
  html,
  body {
-     margin: 0;
+     margin: 0 auto;
      padding: 0;
      color: var(--text-primary);
      background-color: var(--bg-primary);
@@ -864,21 +864,14 @@
          transform: translateX(40px);
      }
 
-     #toggle-btn,
-     .ri-menu-line {
-         margin: 0;
-         padding: 0;
-     }
-
      #toggle-btn {
          display: inline-flex;
          align-items: center;
      }
 
      .navbar .nav-text ul {
-         gap: 10px;
          justify-content: flex-end;
-         margin-right: 40px;
+         margin-right: 10px;
 
      }
 
@@ -887,9 +880,9 @@
 
      }
 
-     #toggle-btn+.ri-menu-line {
+     /* #toggle-btn+.ri-menu-line {
          margin-left: 6px;
-     }
+     } */
 
      .navbar .nav-text .ri-close-fill {
          display: none;
@@ -922,8 +915,8 @@
      }
 
      .projectSection .project1 .project1-text .project1-btn span {
-        font-size: 0.85rem;
-    }
+         font-size: 0.85rem;
+     }
 
      .herosection-3 h1 {
          font-size: 5.3vh;
@@ -1006,6 +999,13 @@
      }
  }
 
+ @media (max-screen: 800px) {
+     .navbar .nav-text .ri-menu-line i {
+         font-size: 40rem;
+
+     }
+ }
+
  @media (max-width: 768px) {
      .navbar .logo .dev-logo {
          font-size: 2rem;
@@ -1015,10 +1015,14 @@
          font-size: 1.5rem;
      }
 
+     .navbar .nav-text #toggle-btn .ri-menu-line {
+         margin-left: -20px;
+     }
+
      .herosection {
          line-height: 20px;
          min-height: 25em;
-         margin-top: 5vh;
+         margin-top: 17vh;
 
      }
 
@@ -1202,8 +1206,16 @@
          margin-left: -2px;
      }
 
+     .navbar .nav-text #toggle-btn .ri-menu-line {
+         margin-left: -40px;
+     }
+
+     .navbar .nav-text #toggle-btn {
+         margin-right: -10px;
+     }
+
      .herosection .herotext {
-         margin-top: 90px;
+         margin-top: 50px;
      }
 
      .herosection .herotext .text1 {
@@ -1245,12 +1257,12 @@
      }
 
      .herosection-2 .projectSection .project1 .project1-btn {
-        justify-content: center;
+         justify-content: center;
      }
 
      .projectSection .project1 .project1-text .project1-btn span {
-        font-size: 0.80rem;
-    }
+         font-size: 0.80rem;
+     }
 
      .herosection-2 .projectSection .project1 .project1-text h3 {
          font-size: 1.25rem;
@@ -1323,16 +1335,30 @@
  }
 
  @media (max-width: 500px) {
-
-
      .herosection-2 .projectSection .project1 .image1-wrapper img {
          height: auto;
          width: 350px;
          border-radius: 15px;
      }
+
+     /* .navbar .nav-text #toggle-btn .ri-menu-line{
+        margin-left: -50px;
+     }
+
+     .navbar .nav-text #toggle-btn {
+        margin-right: -30px;
+     }
+
+     .navbar .logo .dev-logo {
+        margin-left: -40px;
+     } */
  }
 
  @media (max-width: 450px) {
+     .navbar .logo .dev-logo {
+         margin-left: 0;
+     }
+
      .herosection-2 .projectSection .project1 .image1-wrapper img {
          height: auto;
          width: 310px;
@@ -1345,6 +1371,19 @@
  }
 
  @media (max-width: 400px) {
+
+     .navbar .nav-text #toggle-btn {
+         margin-right: -35px;
+     }
+
+     .navbar .nav-text #toggle-btn .ri-menu-line {
+         margin-left: -70px;
+     }
+
+     .navbar .nav-text #toggle-btn i {
+         font-size: 1.45rem;
+     }
+
      .herosection-2 .projectSection .project1 .image1-wrapper img {
          height: auto;
          width: 290px;
@@ -1360,9 +1399,17 @@
      }
  }
 
- @media (max-width: 390px) {
-     .navbar .nav-text ul #toggle-btn i {
-         margin-right: 65px;
+ @media (max-width: 381px) and (min-width: 361px) {
+     .navbar .nav-text #toggle-btn {
+         margin-right: 18px;
+     }
+
+     .navbar .nav-text #toggle-btn .ri-menu-line {
+         margin-left: -25px;
+     }
+
+     .navbar .nav-text #toggle-btn i {
+         font-size: 1.45rem;
      }
  }
 
@@ -1370,11 +1417,6 @@
      .navbar .logo .dev-logo {
          font-size: 1.6rem;
          padding-left: 2.5rem;
-     }
-
-     .navbar .nav-text ul i {
-         font-size: 1.4rem;
-         margin-left: 5rem;
      }
 
      .herosection {
@@ -1696,7 +1738,7 @@
      }
 
      .navbar .nav-text ul #toggle-btn i {
-         margin-right: 95px;
+         margin-right: 105px;
      }
 
      .navbar .nav-text ul i {
@@ -1704,12 +1746,12 @@
      }
 
      .herosection-2 .projectSection .project1 .project1-text .project1-btn a i {
-        font-size: 0.95rem;
-    }
+         font-size: 0.95rem;
+     }
 
-    .projectSection .project1 .project1-text .project1-btn span {
-       font-size: 0.80rem;
-   }
+     .projectSection .project1 .project1-text .project1-btn span {
+         font-size: 0.80rem;
+     }
 
      .herosection-2 .projectSection .project1 .image1-wrapper img {
          height: auto;
@@ -1728,6 +1770,10 @@
      .contactinfo .infobox .email,
      .contactinfo .infobox .location {
          transform: translateX(-2.1rem);
+     }
+
+     .contacttext h5 {
+        padding: 0px 20px;
      }
 
      .footer {
