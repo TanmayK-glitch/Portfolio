@@ -140,9 +140,11 @@
      line-height: 20px;
  }
 
- .herosection .herotext h4 {
+ .herosection .herotext p {
      font-size: 1em;
-     font-weight: 400;
+     font-weight: 300;
+     max-width: 65rem;
+     text-align: center;
  }
 
  .herosection .herotext span {
@@ -167,8 +169,8 @@
      /* margin-top: 10px; */
  }
 
- .herosection .text2 {
-     font-size: 1em;
+ .herosection .herotext p {
+     font-size: 1rem;
  }
 
  .herosection .herobtns button {
@@ -867,6 +869,7 @@
      #toggle-btn {
          display: inline-flex;
          align-items: center;
+         position: relative;
      }
 
      .navbar .nav-text ul {
@@ -886,6 +889,9 @@
 
      .navbar .nav-text .ri-close-fill {
          display: none;
+         position: absolute;
+         top: 0;
+         right: 0;
      }
 
      .herosection .herotext h1 {
@@ -942,7 +948,7 @@
          position: fixed;
          top: 0;
          right: 0;
-         width: 40%;
+         width: 30%;
          height: 100vh;
          z-index: 1000;
          background-color: var(--bg-primary);
@@ -979,6 +985,10 @@
          display: none;
      }
 
+     .nav-text .animate-out {
+         animation: slideOut 0.3s forwards;
+     }
+
      @keyframes slideIn {
          from {
              transform: translateX(100%);
@@ -986,6 +996,18 @@
 
          to {
              transform: translateX(0%);
+         }
+     }
+
+     @keyframes slideOut {
+         from {
+             opacity: 1;
+             transform: translateX(0%);
+         }
+
+         to {
+             opacity: 0;
+             transform: translate(100%);
          }
      }
 
@@ -1019,6 +1041,11 @@
          margin-left: -20px;
      }
 
+     .navbar .nav-text.active ul li {
+         display: block;
+         font-size: 1.1rem;
+     }
+
      .herosection {
          line-height: 20px;
          min-height: 25em;
@@ -1035,7 +1062,7 @@
      }
 
      .herosection .herotext .text2 {
-         font-size: 0.98rem;
+         font-size: 0.9rem;
          font-weight: 300;
      }
 
@@ -1214,6 +1241,15 @@
          margin-right: -10px;
      }
 
+     .navbar .nav-text.active ul li {
+        display: block;
+        font-size: 1.05rem;
+    }
+
+    .navbar .nav-text.active ul{
+        padding: 60px 0px 0px 50px;
+    }
+
      .herosection .herotext {
          margin-top: 50px;
      }
@@ -1229,7 +1265,7 @@
      }
 
      .herosection .herotext .text2 {
-         font-size: 0.84rem;
+         font-size: 0.8rem;
          font-weight: 300;
      }
 
@@ -1325,12 +1361,8 @@
      }
 
      .navbar .nav-text.active {
-         width: 100vw;
-         min-width: unset;
-         max-width: unset;
-         left: 0;
-         right: 0;
-         padding: 70px 10px 30px 10px;
+         width: 40%;
+         padding: 10px 30px 50px 20px;
      }
  }
 
@@ -1341,22 +1373,18 @@
          border-radius: 15px;
      }
 
-     /* .navbar .nav-text #toggle-btn .ri-menu-line{
-        margin-left: -50px;
+     .navbar .nav-text.active ul li {
+        font-size: 0.98rem;
      }
-
-     .navbar .nav-text #toggle-btn {
-        margin-right: -30px;
-     }
-
-     .navbar .logo .dev-logo {
-        margin-left: -40px;
-     } */
  }
 
  @media (max-width: 450px) {
      .navbar .logo .dev-logo {
          margin-left: 0;
+     }
+
+     .navbar .nav-text.active {
+        width: 30%;
      }
 
      .herosection-2 .projectSection .project1 .image1-wrapper img {
@@ -1382,6 +1410,10 @@
 
      .navbar .nav-text #toggle-btn i {
          font-size: 1.45rem;
+     }
+
+     .navbar .nav-text.active {
+        width: 25%;
      }
 
      .herosection-2 .projectSection .project1 .image1-wrapper img {
@@ -1433,8 +1465,9 @@
      }
 
      .herosection .herotext .text2 {
-         font-size: 0.82rem;
+         font-size: 0.79rem;
          font-weight: 300;
+         padding: 0px 10px;
      }
 
      .herosection .herobtns button {
@@ -1637,7 +1670,7 @@
      }
 
      .herosection .herotext .text2 {
-         font-size: 0.8rem;
+         font-size: 0.75rem;
          font-weight: 300;
      }
 
@@ -1773,7 +1806,7 @@
      }
 
      .contacttext h5 {
-        padding: 0px 20px;
+         padding: 0px 20px;
      }
 
      .footer {
