@@ -11,10 +11,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 </head>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        AOS.init({
+            once: true,
+            duration: 600,
+            offset: 50
+        });
+    });
+</script>
 
 <body>
     <div class="navbar">
@@ -44,7 +53,7 @@
             </ul>
         </div>
     </div>
-    <div class="herosection" id="home">
+    <div class="herosection" id="home" data-aos="fade-up" data-aos-duration="4000">
         <div class="herotext">
             <h4 class="text1"> Frontend Developer </h4>
             <h1> Hi, I'm <span>Tanmay</span> </h1>
@@ -53,24 +62,24 @@
                 Always learning, improving, and sometimes even coding without coffee (not recommended).<br>
                 Scroll down and check out what I’ve been building</p>
         </div>
-        <div class="herobtns">
+        <div class="herobtns" data-aos="fade-up" data-aos-delay="200">
             <a href="#hireMe"><button class="hrobtn1"> Hire Me </button></a>
             <a href="#myWork"><button class="hrobtn2"> My Work </button></a>
         </div>
     </div>
-    <div class="herosection-2" id="projects">
+    <div class="herosection-2" id="projects" data-aos="fade-up" data-aos-delay="100">
         <div class="herotext2" id="myWork">
             <h4> Featured Work </h4>
             <h1> My Recent Projects </h1>
         </div>
-        <div class="projectSection">
+        <div class="projectSection" data-aos="slide-up" data-aos-delay="150">
             <div class="project1">
                 <div class="image1-wrapper">
                     <img src="project1-ss.png">
                 </div>
                 <div class="project1-text">
                     <h3> Travel Website Clone (Inspired by Liberty Travel)</h3>
-                    <h5>Made a clone of the Liberty Travel website just for fun and to practice my front-end skills.
+                    <h5>Recreated the Liberty Travel homepage as a UI practice project to sharpen my frontend skills.
                         It was a cool way to work around with layouts and see how close I could get to the real thing
                         using HTML, CSS, and JavaScript.
                     </h5>
@@ -95,7 +104,7 @@
         </div>
 
     </div>
-    <div class="herosection-3" id="tech">
+    <div class="herosection-3" id="tech" data-aos="fade-up" data-aos-delay="100">
         <h4> Tech Stack</h4>
         <h1> My Tools And Technologies</h1>
         <div class="techIcons">
@@ -109,12 +118,12 @@
     </div>
 
 
-    <div class="contacttext">
+    <div class="contacttext" data-aos="fade-up" data-aos-delay="100">
         <h4> Get In Touch </h4>
         <h1> Contact Me </h1>
         <h5> Available for Freelance Work - Drop me a message to collaborate!</h5>
     </div>
-    <div class="contactinfo" id="contact">
+    <div class="contactinfo" id="contact" data-aos="fade-up" data-aos-delay="100">
         <div class="infobox">
             <h2> Contact Information </h2>
             <div class="email">
@@ -143,7 +152,7 @@
                 </div>
             </div>
         </div>
-        <div class="contactform" id="hireMe">
+        <div class="contactform" id="hireMe" data-aos="fade-up" data-aos-delay="100">
             <h2> Send Me a Message </h2>
             <form action="https://formspree.io/f/movlalbn" method="POST">
                 <label for="fname"> Name </label>
