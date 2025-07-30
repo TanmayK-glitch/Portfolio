@@ -186,11 +186,12 @@
  .herosection .herobtns .hrobtn1 {
      position: relative;
      background: #000000;
-     border: 0.2px solid rgba(248, 250, 252, 0.5);
      background-clip: padding-box;
      border-radius: 50px;
      transition: all 0.3s ease-in-out;
      z-index: 1;
+     background: linear-gradient(to left, #4b0082, #ff69b4);
+     color: white;
  }
 
  .herosection .herobtns .hrobtn1::before {
@@ -203,14 +204,14 @@
 
  .herosection .herobtns .hrobtn1:hover {
      transform: translateY(-5px);
-     background: linear-gradient(to right, #4b0082, #ff69b4);
      border: none;
-     color: #000000;
  }
 
  .herosection .herobtns .hrobtn2 {
      border: 0.2px solid rgba(248, 250, 252, 0.5);
      transition: all 0.3s ease-in-out;
+     background-color: var(--text-primary);
+     color: var(--bg-primary);
  }
 
  .herosection .herobtns .hrobtn2:hover {
@@ -274,7 +275,7 @@
  }
 
  [data-theme="light"] .project1 .image1-wrapper img {
-    border: 0.5px solid var(--text-secondary);
+     border: 0.5px solid var(--text-secondary);
  }
 
  .herosection-2 .projectSection .project1 .image1-wrapper {
@@ -323,10 +324,6 @@
  .projectSection .project1 .project1-text .project1-btn span {
      font-size: 0.90rem;
  }
-
- /* .herosection-2 .projectSection .project1 .project1-text .project1-btn a i {
-    font-size: 1.2rem;
-} */
 
  .icon-link {
      display: inline-flex;
@@ -688,14 +685,6 @@
      color: #ac1da0;
  }
 
- /* .footer .endingText p {
-     font-size: 0.75rem;
-     margin-top: 6rem;
- } */
-
-
-
-
  /* ----------------------------------------------------------------------------------- */
  /* Responsiveness */
  @media (max-width: 1200px) {
@@ -758,6 +747,7 @@
          margin-top: 13px;
          margin-bottom: 10px;
          font-weight: 600;
+         ;
      }
 
      .herosection-2 .projectSection .project1 .project1-text h5 {
@@ -862,10 +852,6 @@
          margin-right: 20px;
 
      }
-
-     /* #toggle-btn+.ri-menu-line {
-         margin-left: 6px;
-     } */
 
      .navbar .nav-text .ri-close-fill {
          display: none;
@@ -1003,7 +989,6 @@
  @media (max-screen: 800px) {
      .navbar .nav-text .ri-menu-line i {
          font-size: 40rem;
-
      }
  }
 
@@ -1068,7 +1053,8 @@
      }
 
      .herosection-2 .projectSection .project1 .image1-wrapper {
-         align-self: flex-start;
+         align-self: center;
+         padding: 1.5rem 1rem;
      }
 
      .herosection-2 .projectSection .project1 .project1-text {
@@ -1221,13 +1207,13 @@
      }
 
      .navbar .nav-text.active ul li {
-        display: block;
-        font-size: 1.05rem;
-    }
+         display: block;
+         font-size: 1.05rem;
+     }
 
-    .navbar .nav-text.active ul{
-        padding: 60px 0px 0px 50px;
-    }
+     .navbar .nav-text.active ul {
+         padding: 60px 0px 0px 50px;
+     }
 
      .herosection .herotext {
          margin-top: 50px;
@@ -1346,6 +1332,7 @@
  }
 
  @media (max-width: 500px) {
+
      .herosection-2 .projectSection .project1 .image1-wrapper img {
          height: auto;
          width: 350px;
@@ -1353,7 +1340,7 @@
      }
 
      .navbar .nav-text.active ul li {
-        font-size: 0.98rem;
+         font-size: 0.98rem;
      }
  }
 
@@ -1363,7 +1350,7 @@
      }
 
      .navbar .nav-text.active {
-        width: 30%;
+         width: 30%;
      }
 
      .herosection-2 .projectSection .project1 .image1-wrapper img {
@@ -1392,7 +1379,7 @@
      }
 
      .navbar .nav-text.active {
-        width: 25%;
+         width: 25%;
      }
 
      .herosection-2 .projectSection .project1 .image1-wrapper img {
