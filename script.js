@@ -94,3 +94,9 @@ document.querySelectorAll('.nav-text a').forEach((vals) => {
     });
 });
 
+document.addEventListener('click', function (e) {
+    if (navMenu.classList.contains('active') && !openToggle.contains(e.target) && !navMenu.contains(e.target)) {
+        closeMenu();
+    }
+});
+
