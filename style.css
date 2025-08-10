@@ -203,7 +203,7 @@
  }
 
  .herosection .herobtns .hrobtn1:hover {
-     transform: translateY(-5px);
+     transform: translateY(-6px);
      border: none;
  }
 
@@ -215,7 +215,7 @@
  }
 
  .herosection .herobtns .hrobtn2:hover {
-     transform: translateY(-5px);
+     transform: translateY(-6px);
  }
 
  /* ------------------------------------------------------------------------------------------ */
