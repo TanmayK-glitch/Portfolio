@@ -11,6 +11,7 @@
      --text-secondary: rgba(248, 250, 252, 0.5);
      --border-primary: rgba(0, 0, 0, 0.2);
      --input-bg: #2a2a2a;
+     --custom-color: #ffff00;
  }
 
  [data-theme="light"] {
@@ -20,6 +21,8 @@
      --text-secondary: rgba(0, 0, 0, 0.7);
      --border-primary: rgba(0, 0, 0, 0.2);
      --input-bg: #e0e0e0;
+     --custom-color: #FF4500;
+     
  }
 
  html,
@@ -333,11 +336,20 @@
      font-size: 0.90rem;
  }
 
+[data-theme="light"]  .projectSection .project1 .project1-text .msg {
+    color: var(--custom-color); 
+    font-weight: 400;
+}
+
+.projectSection .project1 .project1-text .msg {
+    color: var(--custom-color); 
+    font-weight: 300;
+}
+
  .icon-link {
      display: inline-flex;
      align-items: center;
      gap: 8px;
-     /* Adjust the gap as needed */
  }
 
 
