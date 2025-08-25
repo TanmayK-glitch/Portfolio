@@ -4,6 +4,7 @@
      font-family: 'Poppins', sans-serif;
  }
 
+
  :root {
      --bg-primary: #000000;
      --bg-secondary: #1a1a1a;
@@ -22,7 +23,7 @@
      --border-primary: rgba(0, 0, 0, 0.2);
      --input-bg: #e0e0e0;
      --custom-color: #FF4500;
-     
+
  }
 
  html,
@@ -336,15 +337,15 @@
      font-size: 0.90rem;
  }
 
-[data-theme="light"]  .projectSection .project1 .project1-text .msg {
-    color: var(--custom-color); 
-    font-weight: 400;
-}
+ /* [data-theme="light"] .projectSection .project1 .project1-text .msg {
+     color: var(--custom-color);
+     font-weight: 400;
+ }
 
-.projectSection .project1 .project1-text .msg {
-    color: var(--custom-color); 
-    font-weight: 300;
-}
+ .projectSection .project1 .project1-text .msg {
+     color: var(--custom-color);
+     font-weight: 300;
+ } */
 
  .icon-link {
      display: inline-flex;
@@ -1407,10 +1408,10 @@
      }
 
      .herosection-2 .projectSection {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         flex-direction: column;
      }
 
      .herosection-2 .projectSection .project1 .image1-wrapper {
@@ -1443,10 +1444,10 @@
      }
 
      .herosection-2 .projectSection {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         flex-direction: column;
      }
 
      .herosection-2 .projectSection .project1 .image1-wrapper {
@@ -1498,10 +1499,10 @@
      }
 
      .herosection-2 .projectSection {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         flex-direction: column;
      }
 
      .herosection .herobtns button {
@@ -1637,10 +1638,10 @@
      }
 
      .herosection-2 .projectSection {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         flex-direction: column;
      }
 
      .herosection-3 .techIcons i {
@@ -1838,10 +1839,10 @@
      }
 
      .herosection-2 .projectSection {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         flex-direction: column;
      }
 
      .herosection-2 .projectSection .project1 {
