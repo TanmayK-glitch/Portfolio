@@ -12,15 +12,13 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         AOS.init({
-            once: true,
-            duration: 600,
-            offset: 50,
+            once: true
         });
     });
 </script>
@@ -28,7 +26,7 @@
 <body>
     <div class="navbar">
         <div class="logo">
-            <h1 class="dev-logo">Tanmay</h1>
+            <a href="#" onclick="location.reload(); return false;"><h1 class="dev-logo">Tanmay</h1></a>
         </div>
         <div class="nav-text">
             <ul>
@@ -53,28 +51,28 @@
             </ul>
         </div>
     </div>
-    <div class="herosection" id="home" data-aos="fade-up" data-aos-duration="4000">
+    <div class="herosection" id="home" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in">
         <div class="herotext">
             <h4 class="text1"> Frontend Developer </h4>
             <h1> Hi, I'm <span>Tanmay</span> </h1>
             <p class="text2">Passionate about creating good-looking, functional landing pages and frontend sites.</p>
         </div>
-        <div class="herobtns" data-aos="fade-up" data-aos-delay="200">
+        <div class="herobtns">
             <a href="#hireMe"><button class="hrobtn1"> Hire Me </button></a>
             <a href="#myWork"><button class="hrobtn2"> My Work </button></a>
         </div>
     </div>
-    <div class="herosection-2" id="projects">
-        <div class="herotext2" id="myWork" data-aos="fade-up">
+    <div class="herosection-2" id="projects" data-aos="fade-up" data-aos-duration="600" data-aos-offset="300">
+        <div class="herotext2" id="myWork">
             <h4> Featured Work </h4>
             <h1> My Recent Projects </h1>
         </div>
         <div class="projectSection">
-            <div class="project1" data-aos="fade-up" data-aos-delay="100" data-aos-once="true">
+            <div class="project1" data-aos="fade-up" data-aos-duration="800">
                 <div class="image1-wrapper">
                     <img src="project2-ss.png" alt="Project Screenshot" loading="lazy">
                 </div>
-                <div class="project1-text" data-aos="fade-up" data-aos-delay="100" data-aos-once="true">
+                <div class="project1-text">
                     <h3>TrackIt — Expense Tracking Web App</h3>
                     <h5>
                         TrackIt is a simple yet powerful expense tracking web application that enables users to add and
@@ -84,7 +82,7 @@
                         JavaScript, and Git, TrackIt focuses on delivering a smooth, intuitive, and visually engaging
                         user experience.
                     </h5>
-                    <div class="project1-btn" data-aos="fade-up" data-aos-delay="150">
+                    <div class="project1-btn">
                         <div class="project1-btn-wrapper">
                             <a href="https://trackitapp-phi.vercel.app/" target="_blank" title="Live" class="icon-link">
                                 <i class="ri-arrow-right-up-line"></i>
@@ -102,17 +100,17 @@
                 </div>
             </div>
 
-            <div class="project1" data-aos="fade-up" data-aos-delay="100" data-aos-once="true">
+            <div class="project1" data-aos="fade-up" data-aos-duration="900">
                 <div class="image1-wrapper">
                     <img src="project1-ss.png" alt="Project Screenshot" loading="lazy">
                 </div>
-                <div class="project1-text" data-aos="fade-up" data-aos-delay="100" data-aos-once="true">
+                <div class="project1-text">
                     <h3> Travel Website Clone (Inspired by Liberty Travel)</h3>
                     <h5>Recreated the Liberty Travel homepage as a UI practice project to sharpen my frontend skills.
                         It was a cool way to work around with layouts and see how close I could get to the real thing
                         using HTML, CSS, and JavaScript.
                     </h5>
-                    <div class="project1-btn" data-aos="fade-up" data-aos-delay="150" data-aos-once="true">
+                    <div class="project1-btn">
                         <div class="project1-btn-wrapper">
                             <a href="https://travel-clone-nine.vercel.app/" target="_blank" title="Live"
                                 class="icon-link">
@@ -133,7 +131,7 @@
         </div>
 
     </div>
-    <div class="herosection-3" id="tech" data-aos="fade-up" data-aos-delay="100">
+    <div class="herosection-3" data-aos="fade-up" data-aos-duration="800">
         <h4> Tech Stack</h4>
         <h1> My Tools And Technologies</h1>
         <div class="techIcons">
@@ -147,12 +145,12 @@
     </div>
 
 
-    <div class="contacttext" data-aos="fade-up" data-aos-delay="100">
+    <div class="contacttext" data-aos="fade-up" data-aos-duration="600">
         <h4> Get In Touch </h4>
         <h1> Contact Me </h1>
         <h5> Available for Freelance Work - Drop me a message to collaborate!</h5>
     </div>
-    <div class="contactinfo" id="contact" data-aos="fade-up" data-aos-delay="100">
+    <div class="contactinfo" data-aos="fade-up" data-aos-duration="600">
         <div class="infobox">
             <h2> Contact Information </h2>
             <div class="email">
@@ -175,13 +173,13 @@
                     <div class="social-icon-wrapper"><a href="https://github.com/TanmayK-glitch/Projects"
                             target="_blank"><i class="fa-brands fa-github"></i></a></div>
                     <div class="social-icon-wrapper"><a href="https://www.linkedin.com/in/tanmay-kangule-921234338/"
-                            target="_blank"><i class="fa-brands fa-linkedin-in"></a></i></div>
+                            target="_blank"><i class="ri-linkedin-fill"></a></i></div>
                     <div class="social-icon-wrapper"><a href="https://x.com/Ktanmay19" target="_blank"><i
                                 class="fa-brands fa-twitter"></i></a></div>
                 </div>
             </div>
         </div>
-        <div class="contactform" id="hireMe" data-aos="fade-up" data-aos-delay="100">
+        <div class="contactform">
             <h2> Send Me a Message </h2>
             <form action="https://formspree.io/f/movlalbn" method="POST">
                 <label for="fname"> Name </label>
@@ -206,8 +204,8 @@
             <a href="https://x.com/Ktanmay19" target="_blank"><i class="fa-brands fa-twitter" title="Twitter"></i></a>
             <a href="https://github.com/TanmayK-glitch/Projects" target="_blank"><i class="fa-brands fa-github"
                     title="Github"></i></a>
-            <a href="https://www.linkedin.com/in/tanmay-kangule-921234338/" target="_blank"><i
-                    class="fa-brands fa-linkedin-in" title="Linkedin"></i></a>
+            <a href="https://www.linkedin.com/in/tanmay-kangule-921234338/" target="_blank"><i class="ri-linkedin-fill"
+                    title="Linkedin"></i></a>
         </div>
     </div>
     <script src="script.js"></script>

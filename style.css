@@ -61,6 +61,7 @@
      position: relative;
      display: inline-block;
      padding-left: 4.5em;
+     cursor: pointer;
  }
 
  .dev-logo::after {
@@ -1299,7 +1300,7 @@
 
      .herosection-2 .projectSection .project1 .image1-wrapper {
          align-self: center;
-     }
+     }  
 
      .herosection-2 .projectSection .project1 .project1-text {
          text-align: center;
