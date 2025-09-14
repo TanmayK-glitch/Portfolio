@@ -88,7 +88,7 @@ document.addEventListener('keydown', function (e) {
     }
 });
 
-document.querySelectorAll('.nav-text a').forEach((vals) => {
+document.querySelectorAll('.nav-text ul li a').forEach((vals) => {
     vals.addEventListener('click', function () {
         closeMenu();
     });
