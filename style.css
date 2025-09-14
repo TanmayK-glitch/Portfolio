@@ -106,27 +106,30 @@
      font-size: 1.7rem;
  }
 
- .navbar .nav-text ul li {
-     cursor: pointer;
-     position: relative;
-     padding-bottom: 5px;
-     font-size: 0.9em;
- }
+.navbar .nav-text ul li a {
+    cursor: pointer;
+    position: relative;
+    padding-bottom: 5px;
+    font-size: 0.9em;
+    color: inherit;
+    text-decoration: none;
+    display: block;
+}
 
- .navbar .nav-text ul li::before {
-     content: '';
-     position: absolute;
-     width: 0;
-     height: 2px;
-     bottom: 0;
-     left: 0;
-     background: linear-gradient(to right, #4b0082, #ff69b4);
-     transition: width 0.3s ease-out;
- }
+.navbar .nav-text ul li a::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to right, #4b0082, #ff69b4);
+    transition: width 0.3s ease-out;
+}
 
- .navbar .nav-text ul li:hover::before {
-     width: 100%;
- }
+.navbar .nav-text ul li a:hover::before {
+    width: 100%;
+}
 
  #toggle-btn i {
      padding-right: 0;
