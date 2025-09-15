@@ -955,7 +955,7 @@
          height: 100vh;
          z-index: 1000;
          background-color: var(--bg-primary);
-         box-shadow: 1px 0 20px rgba(75, 0, 130, 0.8);
+         box-shadow: 1px 0 18px rgba(75, 0, 130, 0.8);
          animation: slideIn 0.3s ease-in-out;
          display: flex;
          flex-direction: column;
@@ -986,6 +986,18 @@
 
      .menu-open .navbar .nav-text .ri-menu-line {
          display: none;
+     }
+
+     /* Dim page background when hamburger menu is open */
+     body.menu-open::before {
+         content: '';
+         position: fixed;
+         inset: 0;
+         background: rgba(0, 0, 0, 0.55);
+         backdrop-filter: blur(2px);
+         z-index: 900;
+         opacity: 1;
+         transition: opacity 0.3s ease-in-out;
      }
 
      .nav-text .animate-out {
