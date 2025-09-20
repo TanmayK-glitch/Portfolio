@@ -106,30 +106,30 @@
      font-size: 1.7rem;
  }
 
-.navbar .nav-text ul li a {
-    cursor: pointer;
-    position: relative;
-    padding-bottom: 5px;
-    font-size: 0.9em;
-    color: inherit;
-    text-decoration: none;
-    display: block;
-}
+ .navbar .nav-text ul li a {
+     cursor: pointer;
+     position: relative;
+     padding-bottom: 5px;
+     font-size: 0.9em;
+     color: inherit;
+     text-decoration: none;
+     display: block;
+ }
 
-.navbar .nav-text ul li a::before {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background: linear-gradient(to right, #4b0082, #ff69b4);
-    transition: width 0.3s ease-out;
-}
+ .navbar .nav-text ul li a::before {
+     content: '';
+     position: absolute;
+     width: 0;
+     height: 2px;
+     bottom: 0;
+     left: 0;
+     background: linear-gradient(to right, #4b0082, #ff69b4);
+     transition: width 0.3s ease-out;
+ }
 
-.navbar .nav-text ul li a:hover::before {
-    width: 100%;
-}
+ .navbar .nav-text ul li a:hover::before {
+     width: 100%;
+ }
 
  #toggle-btn i {
      padding-right: 0;
@@ -283,12 +283,14 @@
      flex-direction: column;
  }
 
- .herosection-2 .projectSection .project1 .image1-wrapper img {
-     height: auto;
-     width: 400px;
-     transition: 0.3s ease-in-out;
-     border-radius: 20px;
- }
+.herosection-2 .projectSection .project1 .image1-wrapper img {
+    height: auto;
+    width: 400px;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 20px;
+    will-change: transform;
+    transform: translateZ(0);
+}
 
  [data-theme="light"] .project1 .image1-wrapper img {
      border: 0.5px solid var(--text-secondary);
@@ -367,6 +369,8 @@
      align-items: center;
      margin-top: 20vh;
      line-height: 20px;
+     overflow: hidden;
+     position: relative;
  }
 
  .herosection-3 h4 {
@@ -384,30 +388,49 @@
      padding-bottom: 20px;
  }
 
- .herosection-3 .techIcons {
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     border: 1px solid rgba(224, 156, 255, 0.3);
-     gap: 20px;
-     border-radius: 25px;
-     padding: 15px 15px;
-     box-shadow: 0 4px 32px 0 rgba(75, 0, 130, 0.5);
+.herosection-3 .techIcons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(224, 156, 255, 0.3);
+    border-radius: 25px;
+    padding: 15px 15px;
+    box-shadow: 0 4px 32px 0 rgba(75, 0, 130, 0.5);
+    width: 35%;
+    overflow: hidden;
+    position: relative;
+}
 
+.techIcons-track {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    animation: scroll 20s infinite linear;
+    will-change: transform;
+}
 
- }
+.herosection-3 .techIcons i {
+    font-size: 3rem;
+    color: var(--text-primary);
+    margin: 10px 10px;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+    flex: 0 0 3rem;
+    will-change: transform;
+}
 
- .herosection-3 .techIcons i {
-     font-size: 3rem;
-     color: var(--text-primary);
-     margin: 10px 10px;
-     vertical-align: middle;
-     transition: transform 0.3s;
- }
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
 
- .herosection-3 .techIcons i:hover {
-     transform: scale(1.2);
- }
+.herosection-3 .techIcons i:hover {
+    transform: scale(1.2);
+}
 
 
  /* --------------------------------------------------------------------------------- */
@@ -1315,7 +1338,7 @@
 
      .herosection-2 .projectSection .project1 .image1-wrapper {
          align-self: center;
-     }  
+     }
 
      .herosection-2 .projectSection .project1 .project1-text {
          text-align: center;
