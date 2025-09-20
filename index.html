@@ -18,7 +18,19 @@
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         AOS.init({
-            once: true
+            once: true,
+            duration: 600,
+            easing: 'ease-out-cubic',
+            offset: 100,
+            delay: 0,
+            disable: false,
+            startEvent: 'DOMContentLoaded',
+            initClassName: 'aos-init',
+            animatedClassName: 'aos-animate',
+            useClassNames: false,
+            disableMutationObserver: false,
+            debounceDelay: 50,
+            throttleDelay: 99,
         });
     });
 </script>
@@ -62,7 +74,7 @@
             <h1> My Recent Projects </h1>
         </div>
         <div class="projectSection">
-            <div class="project1" data-aos="fade-up" data-aos-duration="800">
+            <div class="project1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
                 <div class="image1-wrapper">
                     <img src="project2-ss.png" alt="Project Screenshot" loading="lazy">
                 </div>
@@ -94,7 +106,7 @@
                 </div>
             </div>
 
-            <div class="project1" data-aos="fade-up" data-aos-duration="900">
+            <div class="project1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
                 <div class="image1-wrapper">
                     <img src="project1-ss.png" alt="Project Screenshot" loading="lazy">
                 </div>
@@ -129,12 +141,25 @@
         <h4> Tech Stack</h4>
         <h1> My Tools And Technologies</h1>
         <div class="techIcons">
-            <i class="fa-brands fa-html5" title="HTML5"></i>
-            <i class="fa-brands fa-css3-alt" title="CSS"></i>
-            <i class="fa-brands fa-js" title="JavaScript"></i>
-            <i class="ri-tailwind-css-fill" title="Tailwind CSS"></i>
-            <i class="fa-brands fa-git-alt" title="Git"></i>
-            <i class="fa-brands fa-square-github" title="GitHub"></i>
+            <div class="techIcons-track">
+                <i class="fa-brands fa-html5" title="HTML5"></i>
+                <i class="fa-brands fa-css3-alt" title="CSS"></i>
+                <i class="fa-brands fa-js" title="JavaScript"></i>
+                <i class="ri-reactjs-fill" title="React.js"></i>
+                <i class="fa-solid fa-c" title="C Language"></i>
+                <i class="ri-tailwind-css-fill" title="Tailwind CSS"></i>
+                <i class="fa-brands fa-git-alt" title="Git"></i>
+                <i class="fa-brands fa-square-github" title="GitHub"></i>
+                <!-- Duplicate for seamless loop -->
+                <i class="fa-brands fa-html5" title="HTML5"></i>
+                <i class="fa-brands fa-css3-alt" title="CSS"></i>
+                <i class="fa-brands fa-js" title="JavaScript"></i>
+                <i class="ri-reactjs-fill" title="React.js"></i>
+                <i class="fa-solid fa-c" title="C Language"></i>
+                <i class="ri-tailwind-css-fill" title="Tailwind CSS"></i>
+                <i class="fa-brands fa-git-alt" title="Git"></i>
+                <i class="fa-brands fa-square-github" title="GitHub"></i>
+            </div>
         </div>
     </div>
 
