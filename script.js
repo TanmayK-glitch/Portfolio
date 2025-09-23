@@ -100,3 +100,25 @@ document.addEventListener('click', function (e) {
     }
 });
 
+// <------------------JS for infinte scroll animation--------------->
+const scrollers = document.querySelectorAll('.techIcons');
+
+if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    addAnimation();
+}
+
+function addAnimation() {
+    scrollers.forEach(scroller => {
+        scroller.setAttribute("data-animated", true);
+
+        const scrollerInner = scroller.querySelector('.techIcons-track');
+        // Clone the direct children of the track, not the container
+        const scrollerContent = Array.from(scrollerInner.children);
+
+        scrollerContent.forEach(item => {
+            const duplicatedItem = item.cloneNode(true);
+            duplicatedItem.setAttribute("aria-hidden", true);
+            scrollerInner.appendChild(duplicatedItem);
+        });
+    });
+}
