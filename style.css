@@ -402,17 +402,34 @@
      border: 1px solid rgba(224, 156, 255, 0.3);
      border-radius: 25px;
      padding: 15px 15px;
-     box-shadow: 0 4px 32px 0 rgba(75, 0, 130, 0.5);
-     width: 35%;
+     box-shadow: 0 0 24px 0 rgba(75, 0, 130, 0.5);
+     max-width: 500px;
+ }
+
+ .techIcons[data-animated="true"] {
      overflow: hidden;
-     position: relative;
+     /* Mask moved to inner track to avoid blurring the border */
+ }
+
+ /* .techIcons[data-animated="true"] .techIcons-track{
+  -webkit-mask-image: linear-gradient(90deg, transparent, white 30%, white 70%, transparent);
+  mask-image: linear-gradient(90deg, transparent, white 30%, white 70%, transparent);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+} */
+
+ [data-animated="true"] .techIcons-track {
+     flex-wrap: nowrap;
+     width: max-content;
+     animation: scroll 25s linear infinite;
  }
 
  .techIcons-track {
      display: flex;
      align-items: center;
-     gap: 20px;
-     animation: scroll 20s infinite linear;
+     /* Keep gap in a variable so animation distance matches at all sizes */
+     --gap: 20px;
+     gap: var(--gap);
      will-change: transform;
  }
 
@@ -426,20 +443,15 @@
      will-change: transform;
  }
 
- @keyframes scroll {
-     0% {
-         transform: translateX(0);
-     }
-
-     100% {
-         transform: translateX(-50%);
-     }
- }
-
  .herosection-3 .techIcons i:hover {
      transform: scale(1.2);
  }
 
+ @keyframes scroll {
+     to {
+         transform: translate(calc(-50% - var(--gap)));
+     }
+ }
 
  /* --------------------------------------------------------------------------------- */
 
