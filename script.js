@@ -122,3 +122,24 @@ function addAnimation() {
         });
     });
 }
+
+// <-----------------------Digital Clock for Footer---------------------->
+function DigitalClock() {
+    const now = new Date();
+    let hours = now.getHours();
+    const minutes = now.getMinutes();
+    const seconds = now.getSeconds();
+    const meridiem = hours >= 12 ? "PM" : "AM";
+
+    hours = hours % 12 || 12;
+
+    function handleZeroes(num) {
+        return num.toString().padStart(2, "0");
+    }
+
+    const timeString = `${handleZeroes(hours)}:${handleZeroes(minutes)}:${handleZeroes(seconds)} ${meridiem}`;
+    document.getElementById("clock").textContent = timeString;
+}
+
+DigitalClock();
+setInterval(DigitalClock, 1000);
