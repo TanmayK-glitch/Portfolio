@@ -13,6 +13,7 @@
      --border-primary: rgba(0, 0, 0, 0.2);
      --input-bg: #2a2a2a;
      --custom-color: #ffff00;
+     --clock-color: #dcdcdc
  }
 
  [data-theme="light"] {
@@ -706,12 +707,13 @@
  }
 
  .footer .footertext h1 {
-     font-size: 1.9em;
-     font-weight: 600;
-     background: linear-gradient(to right, #4b0082, #ff69b4);
-     -webkit-background-clip: text;
-     background-clip: text;
-     -webkit-text-fill-color: transparent;
+     font-size: 1.3em;
+     font-weight: 400;
+     /* background: linear-gradient(to right, #4b0082, #ff69b4); */
+     color: var(--clock-color);
+     /* -webkit-background-clip: text; */
+     /* background-clip: text;
+     -webkit-text-fill-color: transparent; */
  }
 
  .footer .footertext h4 {
@@ -888,8 +890,8 @@
      }
 
      .footer .footertext h1 {
-         font-size: 1.5rem;
-         font-weight: 600;
+         font-size: 1.4rem;
+         font-weight: 400;
      }
 
  }
@@ -1257,11 +1259,8 @@
      }
 
      .footer .footertext h1 {
-         font-size: 1rem;
-     }
-
-     .footer .footertext h1 {
-         font-size: 1.1rem;
+         font-size: 0.9rem;
+         font-weight: 400;
      }
 
      .footer .footericons {
@@ -1429,7 +1428,7 @@
      }
 
      .footer .footertext h1 {
-         font-size: 1.3rem;
+         font-size: 0.9rem;
      }
 
      .navbar .nav-text.active {
@@ -1645,7 +1644,7 @@
      }
 
      .footer .footertext h1 {
-         font-size: 1.1rem;
+         font-size: 0.9rem;
      }
 
      .footer .footericons {
@@ -1852,7 +1851,7 @@
      }
 
      .footer .footertext h1 {
-         font-size: 1rem;
+         font-size: 0.9rem;
      }
 
      .footer .footericons {
