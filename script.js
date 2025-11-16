@@ -172,5 +172,110 @@ projectCards.forEach((card) => {
     });
 });
 
+// <-----------GSAP Animations-------------->
+// Master timeline for navbar animations
+document.addEventListener('DOMContentLoaded', function() {
+    var navTimeline = gsap.timeline({ defaults: { ease: "power3.out" } });
 
+    // Logo animation - scale with rotation and fade
+    navTimeline.from(".logo", {
+        y: -30,
+        x: -20,
+        opacity: 0,
+        scale: 0.5,
+        rotation: -10,
+        duration: 1,
+        ease: "back.out(1.7)",
+        delay: 0.3
+    });
 
+    navTimeline.from("ul li", {
+        y: -30,
+        x: 50,
+        opacity: 0,
+        scale: 0.8,
+        rotation: 5,
+        duration: 0.9,
+        ease: "elastic.out(1, 0.5)",
+        stagger: {
+            amount: 0.6,
+            from: "end"
+        }
+    }, "-=0.5");
+
+    navTimeline.from("#toggle-btn i", {
+        y: -20,
+        opacity: 0,
+        scale: 0,
+        rotation: 180,
+        duration: 0.8,
+        ease: "back.out(2)",
+        stagger: {
+            amount: 0.4,
+            from: "start"
+        }
+    }, "-=0.3");
+
+    document.querySelectorAll("ul li a").forEach((link) => {
+        link.addEventListener("mouseenter", () => {
+            gsap.to(link, {
+                scale: 1.1,
+                y: -2,
+                duration: 0.3,
+                ease: "power2.out"
+            });
+        });
+        
+        link.addEventListener("mouseleave", () => {
+            gsap.to(link, {
+                scale: 1,
+                y: 0,
+                duration: 0.3,
+                ease: "power2.out"
+            });
+        });
+    });
+
+    // Logo hover effect
+    const logo = document.querySelector(".logo");
+    if (logo) {
+        logo.addEventListener("mouseenter", () => {
+            gsap.to(logo, {
+                scale: 1.05,
+                rotation: 2,
+                duration: 0.3,
+                ease: "power2.out"
+            });
+        });
+        
+        logo.addEventListener("mouseleave", () => {
+            gsap.to(logo, {
+                scale: 1,
+                rotation: 0,
+                duration: 0.3,
+                ease: "power2.out"
+            });
+        });
+    }
+
+    // Icon hover effects
+    document.querySelectorAll("#toggle-btn i").forEach((icon) => {
+        icon.addEventListener("mouseenter", () => {
+            gsap.to(icon, {
+                scale: 1.2,
+                rotation: 10,
+                duration: 0.3,
+                ease: "back.out(2)"
+            });
+        });
+        
+        icon.addEventListener("mouseleave", () => {
+            gsap.to(icon, {
+                scale: 1,
+                rotation: 0,
+                duration: 0.3,
+                ease: "power2.out"
+            });
+        });
+    });
+});
