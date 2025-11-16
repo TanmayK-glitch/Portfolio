@@ -25,7 +25,6 @@
      --input-bg: #e0e0e0;
      --custom-color: #FF4500;
      --clock-color: #000000
-
  }
 
  html,
@@ -46,29 +45,33 @@
      min-height: 100vh;
  }
 
-.project1{position: relative; overflow: hidden;}
-.project1 .cursorGlow{
-   position: absolute;
-    top: 0;
-    left: 0;
-    height: 150px;
-    width: 150px;
-    border-radius: 50%;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-   z-index: 1;
-    filter: blur(70px);
-    opacity: 0;
-    transition: opacity 0.2s ease;
-   background: radial-gradient(circle at center,
-       rgba(255, 255, 255, 0.6) 0%,
-       rgba(255, 255, 255, 0.30) 40%,
-       rgba(255, 255, 255, 0) 70%);
-   mix-blend-mode: normal;
+ .project1 {
+     position: relative;
+     overflow: hidden;
  }
 
-.cursorGlow.active{
-    opacity: 1;
+ .project1 .cursorGlow {
+     position: absolute;
+     top: 0;
+     left: 0;
+     height: 150px;
+     width: 150px;
+     border-radius: 50%;
+     pointer-events: none;
+     transform: translate(-50%, -50%);
+     z-index: 1;
+     filter: blur(70px);
+     opacity: 0;
+     transition: opacity 0.2s ease;
+     background: radial-gradient(circle at center,
+             rgba(255, 255, 255, 0.6) 0%,
+             rgba(255, 255, 255, 0.30) 40%,
+             rgba(255, 255, 255, 0) 70%);
+     mix-blend-mode: normal;
+ }
+
+ .cursorGlow.active {
+     opacity: 1;
  }
 
  .navbar {
