@@ -174,7 +174,7 @@ projectCards.forEach((card) => {
 
 // <-----------GSAP Animations-------------->
 // Master timeline for navbar animations
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     var navTimeline = gsap.timeline({ defaults: { ease: "power3.out" } });
 
     // Logo animation - scale with rotation and fade
@@ -225,7 +225,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 ease: "power2.out"
             });
         });
-        
+
         link.addEventListener("mouseleave", () => {
             gsap.to(link, {
                 scale: 1,
@@ -247,7 +247,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 ease: "power2.out"
             });
         });
-        
+
         logo.addEventListener("mouseleave", () => {
             gsap.to(logo, {
                 scale: 1,
@@ -268,7 +268,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 ease: "back.out(2)"
             });
         });
-        
+
         icon.addEventListener("mouseleave", () => {
             gsap.to(icon, {
                 scale: 1,
