@@ -372,22 +372,30 @@
      font-size: 0.90rem;
  }
 
- /* [data-theme="light"] .projectSection .project1 .project1-text .msg {
-     color: var(--custom-color);
-     font-weight: 400;
- }
-
- .projectSection .project1 .project1-text .msg {
-     color: var(--custom-color);
-     font-weight: 300;
- } */
-
  .icon-link {
      display: inline-flex;
      align-items: center;
      gap: 8px;
  }
 
+ .non-responsive-badge {
+     display: inline-block;
+     background: rgba(255, 69, 0, 0.1);
+     border: 1px solid #FF4500;
+     color: #FF4500;
+     padding: 6px 12px;
+     border-radius: 6px;
+     font-size: 0.85rem;
+     margin-bottom: 15px;
+     font-weight: 500;
+     display: inline-flex;
+     align-items: center;
+     gap: 6px;
+ }
+
+ .non-responsive-badge i {
+     font-size: 1rem;
+ }
 
  /* -------------------------------------------------------------------------------- */
 
