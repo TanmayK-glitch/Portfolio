@@ -101,27 +101,27 @@ document.addEventListener('click', function (e) {
 });
 
 // <------------------JS for infinte scroll animation--------------->
-const scrollers = document.querySelectorAll('.techIcons');
+// const scrollers = document.querySelectorAll('.techIcons');
 
-if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    addAnimation();
-}
+// if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+//     addAnimation();
+// }
 
-function addAnimation() {
-    scrollers.forEach(scroller => {
-        scroller.setAttribute("data-animated", true);
+// function addAnimation() {
+//     scrollers.forEach(scroller => {
+//         scroller.setAttribute("data-animated", true);
 
-        const scrollerInner = scroller.querySelector('.techIcons-track');
-        // Clone the direct children of the track, not the container
-        const scrollerContent = Array.from(scrollerInner.children);
+//         const scrollerInner = scroller.querySelector('.techIcons-track');
+//         // Clone the direct children of the track, not the container
+//         const scrollerContent = Array.from(scrollerInner.children);
 
-        scrollerContent.forEach(item => {
-            const duplicatedItem = item.cloneNode(true);
-            duplicatedItem.setAttribute("aria-hidden", true);
-            scrollerInner.appendChild(duplicatedItem);
-        });
-    });
-}
+//         scrollerContent.forEach(item => {
+//             const duplicatedItem = item.cloneNode(true);
+//             duplicatedItem.setAttribute("aria-hidden", true);
+//             scrollerInner.appendChild(duplicatedItem);
+//         });
+//     });
+// }
 
 // <-----------------------Digital Clock for Footer---------------------->
 function DigitalClock() {
@@ -145,7 +145,7 @@ DigitalClock();
 setInterval(DigitalClock, 1000);
 
 // <--------Cursor Effect (card-scoped)----------------->
-const projectCards = document.querySelectorAll('.project1');
+const projectCards = document.querySelectorAll('.project1, .techContainer');
 
 projectCards.forEach((card) => {
     let glow = card.querySelector('.cursorGlow');
