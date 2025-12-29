@@ -8,7 +8,6 @@ function App() {
   return (
     <div className="relative min-h-screen bg-white dark:bg-[#000000] text-black dark:text-white transition-colors duration-300">
 
-      {/* 1. Global Dot Grid Overlay */}
       <div
         className="fixed inset-0 pointer-events-none z-0 opacity-[0.08] dark:opacity-[0.12]"
         style={{
@@ -17,7 +16,6 @@ function App() {
         }}
       />
 
-      {/* 2. Main Content Wrapper */}
       <main className="relative z-10">
         <About />
         <Projects />

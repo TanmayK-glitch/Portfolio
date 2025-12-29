@@ -36,27 +36,22 @@
         rgba(255, 255, 255, 0.01) 20px);
   }
 
-  /* Body text: Inter (default for all text elements) */
   body, p, span, div, a, button, li, td, th, label, input, textarea, select, section, article, nav, footer, header {
     font-family: 'Inter', sans-serif;
   }
-  
-  /* Ensure paragraphs specifically get Inter font */
+
   p {
     font-family: 'Inter', sans-serif !important;
   }
-  
-  /* Specific class for About paragraph to ensure Inter font */
+
   .about-paragraph {
     font-family: 'Inter', sans-serif !important;
   }
 
-  /* Headings: Space Grotesk - must override any parent font */
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Space Grotesk', sans-serif !important;
   }
 
-  /* Accents: JetBrains Mono */
   code, pre, kbd, samp {
     font-family: 'JetBrains Mono', monospace !important;
   }

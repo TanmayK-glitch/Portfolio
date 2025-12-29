@@ -5,9 +5,8 @@ import { FiArrowUpRight, FiMail, FiCalendar } from 'react-icons/fi';
 const Contact = () => {
   return (
     <section id="contact" className="py-24 px-6 transition-colors duration-500">
-      <div className="max-w-4xl mx-auto border border-black/10 dark:border-white/10 rounded-[2.5rem] p-12 md:p-24 relative overflow-hidden bg-gray-50/50 dark:bg-white/[0.01]">
+      <div className="max-w-4xl mx-auto border border-black/10 dark:border-white/10 rounded-lg p-12 md:p-24 relative overflow-hidden bg-gray-50/50 dark:bg-white/[0.01]">
 
-        {/* Subtle Technical Dot Grid for texture */}
         <div
           className="absolute inset-0 opacity-[0.1] dark:opacity-[0.15] pointer-events-none"
           style={{
@@ -31,7 +30,6 @@ const Contact = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
-            {/* Email Button with Minimal Hover */}
             <a
               href={portfolioData.personal.social.email}
               className="w-full sm:w-auto flex items-center justify-center gap-3 px-10 py-4 bg-black dark:bg-white text-white dark:text-black rounded-2xl font-bold text-sm transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-xl hover:shadow-black/10 dark:hover:shadow-white/5 active:scale-95"
@@ -40,7 +38,6 @@ const Contact = () => {
               <span>Email Me</span>
             </a>
 
-            {/* Book a Call Button with Minimal Hover */}
             <a
               href="https://cal.com/tanmay-k-mvo6po/30min"
               target="_blank"

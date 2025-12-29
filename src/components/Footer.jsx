@@ -2,7 +2,7 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { portfolioData } from '../data/portfolioData.jsx'
 
 const Footer = () => {
-  // X (Twitter) icon component
+
   const XIcon = ({ size = 20, className = '' }) => (
     <svg
       width={size}
@@ -40,7 +40,6 @@ const Footer = () => {
   return (
     <footer className="relative border-t border-black/5 dark:border-white/5 py-16 px-6 overflow-hidden">
       
-      {/* Subtle Grain Texture Overlay */}
       <div 
         className="absolute inset-0 pointer-events-none opacity-[0.015] dark:opacity-[0.03]"
         style={{ 
@@ -50,7 +49,6 @@ const Footer = () => {
 
       <div className="max-w-4xl mx-auto flex items-center justify-between relative z-10">
         
-        {/* Styled TK Mark (Replaces Tanmay) */}
         <div className="group cursor-default">
           <span className="text-5xl font-bold tracking-tighter italic text-black/10 dark:text-white/10 group-hover:text-black dark:group-hover:text-white transition-colors duration-700 ease-in-out select-none">
             TK

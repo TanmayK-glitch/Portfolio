@@ -3,7 +3,6 @@ import { FaMoon, FaSun } from 'react-icons/fa'
 
 const Navbar = () => {
   const [darkMode, setDarkMode] = useState(() => {
-    // Check localStorage first, then system preference, default to dark
     const stored = localStorage.getItem('darkMode')
     if (stored !== null) {
       return stored === 'true'
