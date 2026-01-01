@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { portfolioData } from '../data/portfolioData.jsx'
-import { fadeInUp, staggerFadeIn } from '../utils/animations'
+import { fadeIn, staggerFade } from '../utils/animations'
 
 const Skills = () => {
   const sectionRef = useRef(null)
@@ -8,10 +8,13 @@ const Skills = () => {
 
   useEffect(() => {
     if (sectionRef.current) {
-      fadeInUp(sectionRef.current)
+      fadeIn(sectionRef.current)
     }
     if (skillsRef.current.length > 0) {
-      staggerFadeIn(skillsRef.current)
+      const validSkills = skillsRef.current.filter(Boolean)
+      if (validSkills.length > 0) {
+        staggerFade(validSkills)
+      }
     }
   }, [])
 

@@ -96,8 +96,6 @@ const About = () => {
           <p className="text-gray-600 dark:text-gray-400 text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl">
             {portfolioData.personal.about}
           </p>
-
-
         </div>
 
       </div>

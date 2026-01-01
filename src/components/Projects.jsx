@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { portfolioData } from '../data/portfolioData.jsx'
-import { fadeInUp, staggerFadeIn } from '../utils/animations'
+import { fadeIn, staggerFade } from '../utils/animations'
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa'
 
 const Projects = () => {
@@ -9,10 +9,13 @@ const Projects = () => {
 
   useEffect(() => {
     if (sectionRef.current) {
-      fadeInUp(sectionRef.current)
+      fadeIn(sectionRef.current)
     }
     if (cardsRef.current.length > 0) {
-      staggerFadeIn(cardsRef.current)
+      const validCards = cardsRef.current.filter(Boolean)
+      if (validCards.length > 0) {
+        staggerFade(validCards)
+      }
     }
   }, [])
 
@@ -72,7 +75,6 @@ const Projects = () => {
           </div>
         ))}
       </div>
-
     </section>
   )
 }
