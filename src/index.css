@@ -6,9 +6,9 @@
 
 @layer base {
 
-  *,
-  *::before,
-  *::after {
+  *:not(.disable-transitions *),
+  *::before:not(.disable-transitions *),
+  *::after:not(.disable-transitions *) {
     transition-property: background-color, border-color, color, fill, stroke;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 500ms;
@@ -36,7 +36,24 @@
         rgba(255, 255, 255, 0.01) 20px);
   }
 
-  body, p, span, div, a, button, li, td, th, label, input, textarea, select, section, article, nav, footer, header {
+  body,
+  p,
+  span,
+  div,
+  a,
+  button,
+  li,
+  td,
+  th,
+  label,
+  input,
+  textarea,
+  select,
+  section,
+  article,
+  nav,
+  footer,
+  header {
     font-family: 'Inter', sans-serif;
   }
 
@@ -48,11 +65,19 @@
     font-family: 'Inter', sans-serif !important;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: 'Space Grotesk', sans-serif !important;
   }
 
-  code, pre, kbd, samp {
+  code,
+  pre,
+  kbd,
+  samp {
     font-family: 'JetBrains Mono', monospace !important;
   }
 }
@@ -66,5 +91,34 @@
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+/* View Transition Animations */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+::view-transition-new(root) {
+  animation: expand-circle 0.8s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+
+@keyframes expand-circle {
+  0% {
+    clip-path: circle(0% at top right);
+  }
+
+  100% {
+    clip-path: circle(150% at top right);
+  }
+}
+
+@layer utilities {
+
+  .disable-transitions,
+  .disable-transitions * {
+    transition: none !important;
   }
 }

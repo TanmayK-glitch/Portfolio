@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { flushSync } from 'react-dom';
 import { portfolioData } from '../data/portfolioData.jsx';
 import { FaGithub, FaLinkedin, FaRegEnvelope } from 'react-icons/fa';
 import { FiSun, FiMoon } from 'react-icons/fi';
@@ -6,11 +7,43 @@ import { SiGmail } from 'react-icons/si';
 import { motion } from 'framer-motion';
 
 const About = () => {
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(() => {
+    const stored = localStorage.getItem('theme');
+    if (stored) return stored === 'dark';
+    return window.matchMedia('(prefers-color-scheme: dark)').matches;
+  });
 
-  const toggleTheme = () => {
-    setDarkMode(!darkMode);
-    document.documentElement.classList.toggle('dark');
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    }
+  }, [darkMode]);
+
+
+
+  const toggleTheme = async () => {
+    if (!document.startViewTransition) {
+      setDarkMode(!darkMode);
+      document.documentElement.classList.toggle('dark');
+      return;
+    }
+
+    document.documentElement.classList.add('disable-transitions');
+
+    try {
+      await document.startViewTransition(() => {
+        flushSync(() => {
+          setDarkMode(!darkMode);
+          document.documentElement.classList.toggle('dark');
+        });
+      }).finished;
+    } finally {
+      document.documentElement.classList.remove('disable-transitions');
+    }
   };
 
   const XIcon = ({ size = 20, className = '' }) => (
