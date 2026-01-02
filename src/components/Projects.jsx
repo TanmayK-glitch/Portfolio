@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react'
 import { portfolioData } from '../data/portfolioData.jsx'
 import { fadeIn, staggerFade } from '../utils/animations'
-import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa'
+import { FaExternalLinkAlt, FaGithub, FaDesktop } from 'react-icons/fa'
 
 const Projects = () => {
   const sectionRef = useRef(null)
@@ -39,7 +39,16 @@ const Projects = () => {
             <div className="p-4 sm:p-6">
               <h3 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white mb-2">{project.title}</h3>
               <p className="text-gray-600 dark:text-gray-400 text-xs sm:text-sm mb-4">{project.description}</p>
-              
+
+              {project.title === "OrbitFx" && (
+                <div className="flex items-start gap-2 mb-4 p-2 bg-amber-50 dark:bg-amber-900/10 border border-amber-200/50 dark:border-amber-700/30 rounded text-amber-800 dark:text-amber-200 animate-in fade-in slide-in-from-top-1 duration-300">
+                  <FaDesktop className="mt-0.5 text-xs shrink-0" />
+                  <span className="text-[10px] sm:text-xs leading-tight font-medium">
+                    Not responsive. Best viewed on Laptop/PC.
+                  </span>
+                </div>
+              )}
+
               <div className="flex items-center gap-2 mb-4">
                 <a
                   href={project.liveUrl}

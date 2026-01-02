@@ -106,13 +106,13 @@ const About = () => {
             </div>
           </div>
 
-          <div className="flex items-center gap-6 text-xl">
+          <div className="flex flex-wrap items-center gap-4 sm:gap-6 text-xl">
             <a href={portfolioData.personal.social.email} className="text-[#EA4335] hover:text-[#EA4335] transition-colors"><SiGmail /></a>
             <a href={portfolioData.personal.social.twitter} target="_blank" rel="noreferrer" className="text-black dark:text-white hover:opacity-80 transition-opacity"><XIcon /></a>
             <a href={portfolioData.personal.social.github} target="_blank" rel="noreferrer" className="text-black dark:text-white hover:opacity-80 transition-opacity"><FaGithub /></a>
             <a href={portfolioData.personal.social.linkedin} target="_blank" rel="noreferrer" className="text-[#0A66C2] hover:text-[#0A66C2] transition-colors"><FaLinkedin /></a>
 
-            <div className="inline-flex items-center gap-3 px-3 py-1.5 bg-gray-400/5 dark:bg-white/[0.03] border border-black/5 dark:border-white/5 rounded-full transition-all duration-300 hover:bg-gray-400/10 dark:hover:bg-white/[0.06]">
+            <div className="inline-flex items-center gap-3 px-3 py-1.5 bg-gray-400/5 dark:bg-white/[0.03] border border-black/5 dark:border-white/5 rounded-full transition-all duration-300 hover:bg-gray-400/10 dark:hover:bg-white/[0.06] whitespace-nowrap shrink-0">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-40"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
