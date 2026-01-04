@@ -10,20 +10,20 @@ const Experience = () => {
                 <div className="border-t border-gray-100 dark:border-zinc-800">
                     {workExperience.map((job, index) => (
                         <div key={index} className="border-b border-gray-100 dark:border-zinc-800 py-10 group transition-colors hover:bg-gray-50/50 dark:hover:bg-zinc-900/10 px-4 -mx-4">
-                            <div className="flex flex-col md:flex-row justify-between items-start gap-6">
-                                <div className="flex gap-5">
-                                    <div className="w-12 h-12 rounded-full bg-gray-100 dark:bg-zinc-800 flex-shrink-0 flex items-center justify-center">
+                            <div className="flex flex-col sm:flex-row justify-between items-start gap-4 sm:gap-6">
+                                <div className="flex gap-4 sm:gap-5">
+                                    <div className="w-12 h-12 rounded-full bg-gray-100 dark:bg-zinc-800 flex-shrink-0 flex items-center justify-center mt-1">
                                         {job.logo?.includes('/') ? <img src={job.logo} alt="" className="w-full h-full object-cover rounded-full" /> : <span className="font-bold">{job.logo}</span>}
                                     </div>
                                     <div>
-                                        <h3 className="text-xl font-bold text-gray-900 dark:text-white">{job.company}</h3>
-                                        <p className="text-sm text-gray-500 mb-4">{job.role}</p>
-                                        <div className="max-w-xl text-sm md:text-base text-gray-600 dark:text-zinc-400 leading-relaxed">
+                                        <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white leading-tight">{job.company}</h3>
+                                        <p className="text-sm text-gray-500 mb-3 sm:mb-4">{job.role}</p>
+                                        <div className="max-w-xl text-sm sm:text-base text-gray-600 dark:text-zinc-400 leading-relaxed">
                                             {job.description}
                                         </div>
                                     </div>
                                 </div>
-                                <div className="text-xs font-mono text-gray-400 dark:text-zinc-500 whitespace-nowrap pt-1">
+                                <div className="text-xs font-mono text-gray-400 dark:text-zinc-500 whitespace-nowrap pl-[4.25rem] sm:pl-0 sm:pt-1">
                                     {job.startDate} — {job.endDate}
                                 </div>
                             </div>
