@@ -29,16 +29,16 @@ export const portfolioData = {
         },
         location: "Pune, India"
     },
-    // workExperience: [
-    //     {
-    //         company: "Gauge.ro",
-    //         role: "Full Stack Developer",
-    //         logo: "G",
-    //         startDate: "Nov 2025",
-    //         endDate: "Present",
-    //         description: "Sole Full Stack Developer in a 3-member core engineering team."
-    //     }
-    // ],
+    workExperience: [
+        {
+            company: "Thyright Innovations",
+            role: "Full Stack Developer",
+            logo: "/images/thyright-logo.png",
+            startDate: "Jan 2025",
+            endDate: "Present",
+            description: "Sole Full Stack Developer Intern in a 4-member core team. Developed scalable web application features using React and FastAPI for a digital health platform focused on thyroid disease management.."
+        }
+    ],
     projects: [
         {
             id: 1,
