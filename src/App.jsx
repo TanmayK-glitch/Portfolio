@@ -5,6 +5,8 @@ import Skills from './components/Skills'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 
+import { Analytics } from "@vercel/analytics/react"
+
 function App() {
   return (
     <div className="relative min-h-screen bg-white dark:bg-[#000000] text-black dark:text-white transition-colors duration-300">
@@ -25,7 +27,7 @@ function App() {
         <Contact />
         <Footer />
       </main>
-
+      <Analytics />
     </div>
   )
 }
