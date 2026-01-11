@@ -41,6 +41,14 @@ export const portfolioData = {
     ],
     projects: [
         {
+            id: 5,
+            title: "Proxy - Attendence Tracker",
+            description: "Proxy is a web app that helps college students track subject-wise attendance, view safe-to-skip class limits, and avoid detention, with secure Google authentication and real-time updates.",
+            image: "/images/proxy.png",
+            liveUrl: "https://proxy-inky-omega.vercel.app/",
+            technologies: ["React", "Tailwind", "JavaScript", "Supabase", "Google Auth", "PostgreSQL"]
+        },
+        {
             id: 1,
             title: "CryptoX",
             description: "Real-time crypto marketplace tracking live prices and market caps with a minimalist UI.",
@@ -75,7 +83,8 @@ export const portfolioData = {
             liveUrl: "https://travel-clone-nine.vercel.app/",
             githubUrl: "https://github.com/TanmayK-glitch/Travel-Clone.git",
             technologies: ["HTML", "CSS", "JavaScript"]
-        }
+        },
+
     ],
     skills: [
         { name: "HTML", icon: <SiHtml5 className="text-orange-600" />, color: "orange" },

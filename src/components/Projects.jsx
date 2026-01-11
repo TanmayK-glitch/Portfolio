@@ -59,15 +59,17 @@ const Projects = () => {
                   <FaExternalLinkAlt className="text-xs" />
                   <span>Live</span>
                 </a>
-                <a
-                  href={project.githubUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-1.5 px-3 py-1.5 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 text-xs font-medium rounded-md hover:bg-gray-100 dark:hover:bg-white/5 transition-colors"
-                >
-                  <FaGithub className="text-xs" />
-                  <span>Code</span>
-                </a>
+                {project.githubUrl && (
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1.5 px-3 py-1.5 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 text-xs font-medium rounded-md hover:bg-gray-100 dark:hover:bg-white/5 transition-colors"
+                  >
+                    <FaGithub className="text-xs" />
+                    <span>Code</span>
+                  </a>
+                )}
               </div>
 
               <div className="flex flex-wrap gap-1.5 sm:gap-2">
