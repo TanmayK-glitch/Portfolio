@@ -12,7 +12,8 @@ import {
     SiVercel,
     SiGit,
     SiGithub,
-    SiTailwindcss
+    SiTailwindcss,
+    SiSupabase
 } from "react-icons/si";
 
 export const portfolioData = {
@@ -36,7 +37,7 @@ export const portfolioData = {
             logo: "/images/thyright-logo.png",
             startDate: "Jan 2025",
             endDate: "Present",
-            description: "Sole Full Stack Developer Intern in a 4-member core team. Developed scalable web application features using React and FastAPI for a digital health platform focused on thyroid disease management.."
+            description: "Sole Full Stack Developer Intern in a 4-member core team. Developed scalable web application features using React, FastAPI and PostgreSQL for a digital health platform focused on thyroid disease management.."
         }
     ],
     projects: [
@@ -91,6 +92,7 @@ export const portfolioData = {
         { name: "CSS", icon: <SiCss3 className="text-blue-500" />, color: "blue" },
         { name: "JavaScript", icon: <SiJavascript className="text-yellow-400" />, color: "yellow" },
         { name: "React", icon: <SiReact className="text-cyan-400" />, color: "cyan" },
+        { name: "Tailwind CSS", icon: <SiTailwindcss className="text-teal-500 dark:text-teal-400" />, color: "teal" },
         { name: "GSAP", icon: <SiGreensock className="text-green-600 dark:text-green-500" />, color: "green" },
         { name: "Node.js", icon: <SiNodedotjs className="text-green-600 dark:text-green-500" />, color: "green" },
         { name: "ExpressJS", icon: <SiExpress className="text-gray-900 dark:text-white" />, color: "white" },
@@ -100,6 +102,8 @@ export const portfolioData = {
         { name: "Vercel", icon: <SiVercel className="text-gray-900 dark:text-white" />, color: "black" },
         { name: "Git", icon: <SiGit className="text-orange-600" />, color: "orange" },
         { name: "GitHub", icon: <SiGithub className="text-gray-900 dark:text-white" />, color: "black" },
-        { name: "Tailwind CSS", icon: <SiTailwindcss className="text-teal-500 dark:text-teal-400" />, color: "teal" }
+        { name: "Supabase", icon: <SiSupabase className="text-emerald-600 dark:text-emerald-400" />, color: "emerald" }
+
+
     ],
 }
