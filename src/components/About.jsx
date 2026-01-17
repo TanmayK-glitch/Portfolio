@@ -4,7 +4,6 @@ import { portfolioData } from '../data/portfolioData.jsx';
 import { FaGithub, FaLinkedin, FaRegEnvelope } from 'react-icons/fa';
 import { FiSun, FiMoon } from 'react-icons/fi';
 import { SiGmail } from 'react-icons/si';
-import { motion } from 'framer-motion';
 
 const About = () => {
   const [darkMode, setDarkMode] = useState(() => {
@@ -62,11 +61,11 @@ const About = () => {
   return (
     <section id="home" className="relative min-h-screen text-[#111111] dark:text-[#f0f0f0] selection:bg-blue-500/20 transition-colors duration-500 overflow-hidden">
 
-      <div className="absolute top-4 right-4 sm:top-6 sm:right-6 md:top-8 md:right-8 lg:top-10 lg:right-10 pointer-events-none select-none z-0 overflow-hidden">
+      {/* <div className="absolute top-4 right-4 sm:top-6 sm:right-6 md:top-8 md:right-8 lg:top-10 lg:right-10 pointer-events-none select-none z-0 overflow-hidden">
         <span className="text-[18vw] sm:text-[22vw] md:text-[26vw] lg:text-[30vw] font-semibold text-black/[0.04] dark:text-white/[0.04] sm:text-black/[0.05] dark:sm:text-white/[0.05] md:text-black/[0.06] dark:md:text-white/[0.06] lg:text-black/[0.07] dark:lg:text-white/[0.07] leading-none tracking-tighter block">
           神
         </span>
-      </div>
+      </div> */}
 
       <nav className="fixed top-0 w-full z-50 backdrop-blur-md px-6 py-6">
         <div className="max-w-4xl mx-auto flex justify-between items-center">
