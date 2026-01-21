@@ -1,33 +1,33 @@
 import { useEffect, useRef } from 'react'
 import { portfolioData } from '../data/portfolioData.jsx'
-import { fadeIn, staggerFade } from '../utils/animations'
+import { staggerFade, slideInFromBottom } from '../utils/animations'
 import { FaExternalLinkAlt, FaGithub, FaDesktop } from 'react-icons/fa'
 
 const Projects = () => {
-  const sectionRef = useRef(null)
+  const headingRef = useRef(null)
   const cardsRef = useRef([])
 
   useEffect(() => {
-    if (sectionRef.current) {
-      fadeIn(sectionRef.current)
+    if (headingRef.current) {
+      slideInFromBottom(headingRef.current)
     }
     if (cardsRef.current.length > 0) {
       const validCards = cardsRef.current.filter(Boolean)
       if (validCards.length > 0) {
-        staggerFade(validCards)
+        staggerFade(validCards, 0.2)
       }
     }
   }, [])
 
   return (
-    <section ref={sectionRef} id="work" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 max-w-4xl mx-auto">
-      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-8 sm:mb-12">Projects</h2>
+    <section id="work" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 max-w-4xl mx-auto">
+      <h2 ref={headingRef} className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-8 sm:mb-12 opacity-0">Projects</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-8 sm:mb-12">
         {portfolioData.projects.map((project, index) => (
           <div
             key={project.id}
             ref={(el) => (cardsRef.current[index] = el)}
-            className="bg-white/50 dark:bg-black/50 border border-gray-200 dark:border-dark-border rounded-lg overflow-hidden hover:border-gray-300 dark:hover:border-white/20 transition-all group"
+            className="bg-white/50 dark:bg-black/50 border border-gray-200 dark:border-dark-border rounded-lg overflow-hidden hover:border-gray-300 dark:hover:border-white/20 transition-all group opacity-0"
           >
             <div className="relative h-48 overflow-hidden">
               <img

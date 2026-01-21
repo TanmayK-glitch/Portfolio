@@ -21,7 +21,7 @@ export const portfolioData = {
         name: "Hey I'm Tanmay",
         age: 19,
         roles: ["Engineer", "Full Stack Developer"],
-        about: "I'm a 19-year-old computer science student and full-stack developer passionate about building real-world solutions. I love exploring the complete development cycle—from front-end design to back-end architecture. Currently, I'm diving deep into artificial intelligence and finding ways to integrate it into practical applications. For me, the best way to learn is by building, and I'm always working on projects that challenge me and solve genuine problems.",
+        about: "I'm a 19-year-old computer science student and full-stack developer passionate about building real-world solutions. I love exploring the complete development cycle from front-end design to back-end architecture. Currently, I'm diving deep into artificial intelligence and finding ways to integrate it into practical applications. For me, the best way to learn is by building, and I'm always working on projects that challenge me and solve genuine problems.",
         social: {
             email: "mailto:tanmayk.code@gmail.com",
             twitter: "https://x.com/Ktanmay19",
