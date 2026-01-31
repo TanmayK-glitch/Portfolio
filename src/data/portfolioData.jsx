@@ -35,7 +35,7 @@ export const portfolioData = {
             company: "Thyright Innovations",
             role: "Full Stack Developer",
             logo: "/images/thyright-logo.png",
-            startDate: "Jan 2025",
+            startDate: "Jan 2026",
             endDate: "Present",
             description: "Sole Full Stack Developer Intern in a 4-member core team. Developed scalable web application features using React, FastAPI and PostgreSQL for a digital health platform focused on thyroid disease management.."
         }
