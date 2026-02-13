@@ -20,10 +20,10 @@ const Navbar = () => {
     }
   }, [darkMode])
 
-  const navItems = ['Home', 'Projects', 'Blog']
+  const navItems = ['About', 'Projects']
 
   const scrollToSection = (section) => {
-    if (section === 'Home') {
+    if (section === 'About') {
       window.scrollTo({ top: 0, behavior: 'smooth' })
     } else {
       const element = document.getElementById(section.toLowerCase())
