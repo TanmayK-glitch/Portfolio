@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { flushSync } from 'react-dom';
+import { Link } from 'react-router-dom';
 import { portfolioData } from '../data/portfolioData.jsx';
 import { FaGithub, FaLinkedin, FaRegEnvelope } from 'react-icons/fa';
 import { FiSun, FiMoon } from 'react-icons/fi';
@@ -92,6 +93,12 @@ const About = () => {
                 {item}
               </a>
             ))}
+            <Link
+              to="/designs"
+              className="text-[10px] uppercase tracking-[0.3em] font-medium text-gray-400 hover:text-black dark:hover:text-white transition-colors font-accent"
+            >
+              Designs
+            </Link>
           </div>
           <button onClick={toggleTheme} className="text-gray-400 hover:text-black dark:hover:text-white">
             {darkMode ? <FiSun size={20} /> : <FiMoon size={20} />}

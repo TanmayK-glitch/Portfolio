@@ -1,34 +1,26 @@
-import About from './components/About'
-import Experience from './components/Experience'
-import Projects from './components/Projects'
-import Skills from './components/Skills'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
+import { Routes, Route, useLocation } from 'react-router-dom'
+import { AnimatePresence } from 'framer-motion'
+import Home from './pages/Home'
+import DesignsPage from './pages/DesignsPage'
+import PageTransition from './components/PageTransition'
 
 import { Analytics } from "@vercel/analytics/react"
 
 function App() {
+  const location = useLocation()
+
   return (
-    <div className="relative min-h-screen bg-white dark:bg-[#000000] text-black dark:text-white transition-colors duration-300">
-
-      <div
-        className="fixed inset-0 pointer-events-none z-0 opacity-[0.08] dark:opacity-[0.12]"
-        style={{
-          backgroundImage: `radial-gradient(currentColor 0.2px, transparent 1.5px)`,
-          backgroundSize: '24px 24px'
-        }}
-      />
-
-      <main className="relative z-10">
-        <About />
-        <Experience />
-        <Projects />
-        <Skills />
-        <Contact />
-        <Footer />
-      </main>
+    <>
+      <AnimatePresence mode="wait">
+        <PageTransition key={location.pathname}>
+          <Routes location={location}>
+            <Route path="/" element={<Home />} />
+            <Route path="/designs" element={<DesignsPage />} />
+          </Routes>
+        </PageTransition>
+      </AnimatePresence>
       <Analytics />
-    </div>
+    </>
   )
 }
 
